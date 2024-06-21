@@ -73,3 +73,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 Acknowledgements
 Special thanks to the XRPL EVM Sidechain community for their support and contributions.
+
+Feel free to customize this description to better fit your project and personal preferences.
