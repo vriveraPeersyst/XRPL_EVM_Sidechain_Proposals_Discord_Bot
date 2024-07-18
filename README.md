@@ -32,7 +32,7 @@ The XRPL EVM Sidechain Proposals Discord Bot is a versatile and automated bot de
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/xrpl-evm-sidechain-proposals-bot.git
+    git clone https://github.com/vriveraPeersyst/xrpl-evm-sidechain-proposals-bot.git
     cd xrpl-evm-sidechain-proposals-bot
     ```
 
