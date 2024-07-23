@@ -60,6 +60,7 @@ The XRPL EVM Sidechain Proposals Discord Bot is a versatile and automated bot de
     - Example `.env`:
       ```plaintext
       OPENAI_API_KEY=your_openai_api_key
+      DISCORD_BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
       ```
 
 5. Run the bot:
