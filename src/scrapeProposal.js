@@ -1,7 +1,7 @@
 const puppeteerUtils = require('./utils/puppeteerUtils');
 
 (async () => {
-  const url = 'https://validators.evm-sidechain.xrpl.org/xrp/proposals/36';
+  const url = "proposalPageUrl": "https://governance.xrplevm.org/xrp/proposals/36";
   try {
     const proposalData = await puppeteerUtils.scrapeProposalData(url);
     console.log('Scraped Proposal Data:', proposalData);
