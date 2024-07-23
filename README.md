@@ -48,7 +48,9 @@ The XRPL EVM Sidechain Proposals Discord Bot is a versatile and automated bot de
       ```json
       {
         "token": "YOUR_DISCORD_BOT_TOKEN",
-        "channelid": "YOUR_DISCORD_CHANNEL_ID"
+        "channelid": "YOUR_DISCORD_CHANNEL_ID",
+      "proposalPageUrl": "https://governance.xrplevm.org/xrp/proposals/36",
+      "baseProposalUrl": "https://governance.xrplevm.org/xrp/proposals"
       }
       ```
 
