@@ -160,7 +160,7 @@ async function scrapeProposalData(url) {
 }
 
 async function scrapeAllProposals(knownProposals, client) {
-  const baseUrl = 'https://validators.evm-sidechain.xrpl.org/xrp/proposals/';
+  const baseUrl = 'https://governance.xrplevm.org/xrp/proposals/';
   let proposalNumber = 1;
   let missingProposals = 0;
 
