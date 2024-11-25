@@ -1342,54 +1342,6 @@
       {
         "name": "UNIC",
         "vote": "Yes"
-      },
-      {
-        "name": "SG-1",
-        "vote": "Yes"
-      },
-      {
-        "name": "evmOS",
-        "vote": "Yes"
-      },
-      {
-        "name": "soru",
-        "vote": "Yes"
-      },
-      {
-        "name": "8CSX",
-        "vote": "Yes"
-      },
-      {
-        "name": "snowmaker",
-        "vote": "Yes"
-      },
-      {
-        "name": "xtoadz",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-k-node-0",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-5",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-4",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-2",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-1",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-0",
-        "vote": "Yes"
       }
     ]
   },
@@ -1443,58 +1395,6 @@
       {
         "name": "catalyze_research",
         "vote": "Yes"
-      },
-      {
-        "name": "UNIC",
-        "vote": "Yes"
-      },
-      {
-        "name": "SG-1",
-        "vote": "Yes"
-      },
-      {
-        "name": "evmOS",
-        "vote": "Yes"
-      },
-      {
-        "name": "soru",
-        "vote": "Yes"
-      },
-      {
-        "name": "8CSX",
-        "vote": "Yes"
-      },
-      {
-        "name": "snowmaker",
-        "vote": "Yes"
-      },
-      {
-        "name": "xtoadz",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-k-node-0",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-1",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-2",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-4",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-5",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-0",
-        "vote": "Yes"
       }
     ]
   },
@@ -1508,7 +1408,88 @@
     "votingEndTime": "May 08, 2024 12:03:25 PM (GMT+2)",
     "proposer": "peersyst-node-0",
     "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/ethermint.feemarket.v1.MsgUpdateParams\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"params\": {\n          \"base_fee\": \"1000000000\",\n          \"base_fee_change_denominator\": 8,\n          \"elasticity_multiplier\": 4,\n          \"enable_height\": \"0\",\n          \"min_gas_multiplier\": \"0.500000000000000000\",\n          \"min_gas_price\": \"800000000000.000000000000000000\",\n          \"no_base_fee\": false\n      }\n  }\n]",
-    "votes": []
+    "votes": [
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrpl_commons",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      },
+      {
+        "name": "Nexus",
+        "vote": "Yes"
+      },
+      {
+        "name": "catalyze_research",
+        "vote": "Yes"
+      },
+      {
+        "name": "UNIC",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "bkgeomatics",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      }
+    ]
   },
   "#34": {
     "number": "#34",
@@ -1560,57 +1541,13 @@
       {
         "name": "8CSX",
         "vote": "Yes"
-      },
-      {
-        "name": "moai-finance",
-        "vote": "Yes"
-      },
-      {
-        "name": "capsign",
-        "vote": "Yes"
-      },
-      {
-        "name": "snowmaker",
-        "vote": "Yes"
-      },
-      {
-        "name": "soru",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-k-node-0",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-5",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-4",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-3",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-2",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-1",
-        "vote": "Yes"
-      },
-      {
-        "name": "peersyst-node-0",
-        "vote": "Yes"
       }
     ]
   },
   "#35": {
     "number": "#35",
     "title": "35 - /packages.blockchain.poa.MsgRemoveValidator,/packages.blockchain.poa.MsgRemoveValidator,/packages.blockchain.poa.MsgRemoveValidator",
-    "state": "Voting",
+    "state": "Passed",
     "submitTime": "May 09, 2024 05:15:15 PM (GMT+2)",
     "depositEndTime": "May 11, 2024 05:15:15 PM (GMT+2)",
     "votingStartTime": "May 09, 2024 05:15:15 PM (GMT+2)",
@@ -1703,7 +1640,7 @@
   "#36": {
     "number": "#36",
     "title": "36 - /cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
-    "state": "Voting",
+    "state": "Passed",
     "submitTime": "May 28, 2024 12:22:13 PM (GMT+2)",
     "depositEndTime": "May 30, 2024 12:22:13 PM (GMT+2)",
     "votingStartTime": "May 28, 2024 12:22:13 PM (GMT+2)",
@@ -1750,25 +1687,62 @@
       {
         "name": "xrp.cafe",
         "vote": "Yes"
-      },
+      }
+    ]
+  },
+  "#37": {
+    "number": "#37",
+    "title": "37 - /packages.blockchain.poa.MsgAddValidator",
+    "state": "Passed",
+    "submitTime": "Jul 23, 2024 05:46:06 PM (GMT+2)",
+    "depositEndTime": "Jul 25, 2024 05:46:06 PM (GMT+2)",
+    "votingStartTime": "Jul 23, 2024 05:46:06 PM (GMT+2)",
+    "votingEndTime": "Jul 30, 2024 05:46:06 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/packages.blockchain.poa.MsgAddValidator\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"validator_address\": \"ethm1gzsalqy0rru2pe6az9ulk69hg2dnm22wrw3sl7\"\n  }\n]",
+    "votes": [
       {
-        "name": "UNIC",
-        "vote": "Yes"
-      },
-      {
-        "name": "evmOS",
-        "vote": "Yes"
-      },
-      {
-        "name": "8CSX",
-        "vote": "Yes"
-      },
-      {
-        "name": "LinkPool",
+        "name": "Nexus",
         "vote": "Yes"
       },
       {
         "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
         "vote": "Yes"
       },
       {
@@ -1780,7 +1754,347 @@
         "vote": "Yes"
       },
       {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#38": {
+    "number": "#38",
+    "title": "38 - /packages.blockchain.poa.MsgAddValidator",
+    "state": "Passed",
+    "submitTime": "Jul 23, 2024 05:48:18 PM (GMT+2)",
+    "depositEndTime": "Jul 25, 2024 05:48:18 PM (GMT+2)",
+    "votingStartTime": "Jul 23, 2024 05:48:18 PM (GMT+2)",
+    "votingEndTime": "Jul 30, 2024 05:48:18 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/packages.blockchain.poa.MsgAddValidator\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"validator_address\": \"ethm1d0sfd23lg0pepqy4lke4w937rltlr32azf52ag\"\n  }\n]",
+    "votes": [
+      {
+        "name": "Nexus",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
         "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#39": {
+    "number": "#39",
+    "title": "39 - /packages.blockchain.poa.MsgAddValidator",
+    "state": "Passed",
+    "submitTime": "Jul 23, 2024 05:50:19 PM (GMT+2)",
+    "depositEndTime": "Jul 25, 2024 05:50:19 PM (GMT+2)",
+    "votingStartTime": "Jul 23, 2024 05:50:19 PM (GMT+2)",
+    "votingEndTime": "Jul 30, 2024 05:50:19 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/packages.blockchain.poa.MsgAddValidator\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"validator_address\": \"ethm1dv6n4heyj724rsu6qxax8ggf42c97hsxpdyxuf\"\n  }\n]",
+    "votes": [
+      {
+        "name": "Nexus",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#40": {
+    "number": "#40",
+    "title": "40 - /packages.blockchain.poa.MsgAddValidator",
+    "state": "Passed",
+    "submitTime": "Jul 23, 2024 05:51:51 PM (GMT+2)",
+    "depositEndTime": "Jul 25, 2024 05:51:51 PM (GMT+2)",
+    "votingStartTime": "Jul 23, 2024 05:51:51 PM (GMT+2)",
+    "votingEndTime": "Jul 30, 2024 05:51:51 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/packages.blockchain.poa.MsgAddValidator\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"validator_address\": \"ethm12479tcjpv0nldmfjr3sxfegwpqrn98lpucwu5r\"\n  }\n]",
+    "votes": [
+      {
+        "name": "Nexus",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#41": {
+    "number": "#41",
+    "title": "41 - /packages.blockchain.poa.MsgAddValidator",
+    "state": "Passed",
+    "submitTime": "Jul 23, 2024 05:53:33 PM (GMT+2)",
+    "depositEndTime": "Jul 25, 2024 05:53:33 PM (GMT+2)",
+    "votingStartTime": "Jul 23, 2024 05:53:33 PM (GMT+2)",
+    "votingEndTime": "Jul 30, 2024 05:53:33 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/packages.blockchain.poa.MsgAddValidator\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"validator_address\": \"ethm17gnd3ulgzlyh66fw3csqqt74mmj63fzpy5zarp\"\n  }\n]",
+    "votes": [
+      {
+        "name": "Nexus",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      },
+      {
+        "name": "blockscout",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
         "vote": "Yes"
       },
       {
@@ -1792,7 +2106,161 @@
         "vote": "Yes"
       },
       {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "xtoadz",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#42": {
+    "number": "#42",
+    "title": "42 - /cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+    "state": "Passed",
+    "submitTime": "Aug 27, 2024 05:29:17 PM (GMT+2)",
+    "depositEndTime": "Aug 29, 2024 05:29:17 PM (GMT+2)",
+    "votingStartTime": "Aug 27, 2024 05:29:17 PM (GMT+2)",
+    "votingEndTime": "Sep 03, 2024 05:29:17 PM (GMT+2)",
+    "proposer": "peersyst-node-0",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"plan\": {\n          \"height\": \"10959649\",\n          \"info\": \"{\"binaries\":{\"linux/amd64\":\"https://github.com/Peersyst/exrp/releases/download/v3.0.0/node_3.0.0_Linux_amd64.tar.gz\\\",\\\"linux/arm64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v3.0.0/node_3.0.0_Linux_arm64.tar.gz\\\",\\\"darwin/amd64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v3.0.0/node_3.0.0_Darwin_amd64.tar.gz\\\",\\\"darwin/arm64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v3.0.0/node_3.0.0_Darwin_arm64.tar.gz\\\"}}\",\n          \"name\": \"v3.0.0\",\n          \"time\": \"0001-01-01T00:00:00Z\",\n          \"upgraded_client_state\": null\n      }\n  }\n]",
+    "votes": [
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "purple-devnet-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "ripple-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "capsign",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrpl_commons",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "palmera-xrpl-evm-node",
+        "vote": "Yes"
+      },
+      {
+        "name": "moai-finance",
+        "vote": "Yes"
+      },
+      {
+        "name": "SG-1",
+        "vote": "Yes"
+      },
+      {
+        "name": "evmOS",
+        "vote": "Yes"
+      }
+    ]
+  },
+  "#43": {
+    "number": "#43",
+    "title": "43 - /cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+    "state": "Voting",
+    "submitTime": "Nov 18, 2024 06:10:18 PM (GMT+1)",
+    "depositEndTime": "Nov 20, 2024 06:10:18 PM (GMT+1)",
+    "votingStartTime": "Nov 18, 2024 06:10:18 PM (GMT+1)",
+    "votingEndTime": "Nov 25, 2024 06:10:18 PM (GMT+1)",
+    "proposer": "peersyst-node-2",
+    "message": "Proposal messages: \n[\n  {\n      \"@type\": \"/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade\",\n      \"authority\": \"ethm10d07y265gmmuvt4z0w9aw880jnsr700jpva843\",\n      \"plan\": {\n          \"height\": \"12803476\",\n          \"info\": \"{\"binaries\":{\"linux/amd64\":\"https://github.com/Peersyst/exrp/releases/download/v4.0.0/node_4.0.0_Linux_amd64.tar.gz\\\",\\\"linux/arm64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v4.0.0/node_4.0.0_Linux_arm64.tar.gz\\\",\\\"darwin/amd64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v4.0.0/node_4.0.0_Darwin_amd64.tar.gz\\\",\\\"darwin/arm64\\\":\\\"https://github.com/Peersyst/exrp/releases/download/v4.0.0/node_4.0.0_Darwin_arm64.tar.gz\\\"}}\",\n          \"name\": \"v4.0.0\",\n          \"time\": \"0001-01-01T00:00:00Z\",\n          \"upgraded_client_state\": null\n      }\n  }\n]",
+    "votes": [
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "bkgeomatics",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "Flowdesk",
+        "vote": "Yes"
+      },
+      {
+        "name": "ethm1f8zhf49uuhf48duh07aa67yypg36l9fx6zlmpa",
+        "vote": "Yes"
+      },
+      {
+        "name": "LinkPool",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrpl_commons",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "purple-devnet-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      },
+      {
         "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
         "vote": "Yes"
       }
     ]

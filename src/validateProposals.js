@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const puppeteerUtils = require('./utils/puppeteerUtils');
 
-const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
+const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
 
 async function validateProposals() {
   let knownProposals = {};
@@ -32,7 +32,7 @@ async function validateProposals() {
 
     if (needsUpdate) {
       console.log(`Updating proposal ${proposalKey}...`);
-      const url = `https://validators.evm-sidechain.xrpl.org/xrp/proposals/${proposalKey.replace('#', '')}`;
+      const url = `https://governance.xrplevm.org/xrplevm/proposals/${proposalKey.replace('#', '')}`;
       const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
 
       if (updatedProposalData) {

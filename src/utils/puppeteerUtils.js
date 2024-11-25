@@ -13,7 +13,7 @@ async function scrapeVotes(url) {
     let previousVotes = [];
     let pageNumber = 1;
     const selector = '[id="__next"] div:nth-child(3) div:nth-child(2) table tbody tr';
-    const loadMoreButtonXPath = '/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[3]/div[3]/div/ul[2]/li[6]/button';
+    const loadMoreButtonXPath = '/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[3]/div[3]/div/ul[2]/li[5]/button';
     const validVotes = ['Yes', 'No', 'Veto', 'Abstain'];
 
     while (true) {
@@ -119,23 +119,23 @@ async function scrapeProposalData(url) {
         return 'Not Found';
       };
 
-      const numberText = getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[1]/div[1]/h4']);
+      const numberText = getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[1]/div[1]/h4']);
       if (numberText === 'Not Found') {
         return null;
       }
 
       return {
         number: numberText,
-        title: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[1]/div[2]/div/h3']),
-        state: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[1]/span/div/p']),
-        submitTime: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/p[5]']),
-        depositEndTime: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/p[7]']),
-        votingStartTime: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/p[9]']),
-        votingEndTime: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/p[11]']),
-        proposer: getElementText(['/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/a']),
+        title: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[1]/div[2]/div/h3']),
+        state: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[1]/span/div/p']),
+        submitTime: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/p[5]']),
+        depositEndTime: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/p[7]']),
+        votingStartTime: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/p[9]']),
+        votingEndTime: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/p[11]']),
+        proposer: getElementText(['/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/a']),
         message: getElementText([
-          '/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/ul/li[1]/p',
-          '/html/body/div[1]/div[1]/div/div[3]/div[2]/div/div/span/div[1]/div[2]/p[13]/text()'
+          '/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/ul/li[1]/p',
+          '/html/body/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/span/div[1]/div[2]/p[13]/text()'
         ]),
         votes: []
       };
@@ -159,8 +159,9 @@ async function scrapeProposalData(url) {
   }
 }
 
+
 async function scrapeAllProposals(knownProposals, client) {
-  const baseUrl = 'https://governance.xrplevm.org/xrp/proposals/';
+  const baseUrl = 'https://governance.xrplevm.org/xrplevm/proposals/';
   let proposalNumber = 1;
   let missingProposals = 0;
 
