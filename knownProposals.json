@@ -2187,7 +2187,7 @@
   "#43": {
     "number": "#43",
     "title": "43 - /cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
-    "state": "Voting",
+    "state": "Passed",
     "submitTime": "Nov 18, 2024 06:10:18 PM (GMT+1)",
     "depositEndTime": "Nov 20, 2024 06:10:18 PM (GMT+1)",
     "votingStartTime": "Nov 18, 2024 06:10:18 PM (GMT+1)",

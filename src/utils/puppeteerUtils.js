@@ -17,7 +17,7 @@ async function scrapeVotes(url) {
     const validVotes = ['Yes', 'No', 'Veto', 'Abstain'];
 
     while (true) {
-      console.log(`Fetching validators from page ${pageNumber}...`);
+      console.log(`Fetching validators from proposal: ${url} page ${pageNumber}...`);
       await page.waitForSelector(selector, { timeout: 60000 });
 
       const votes = await page.evaluate((validVotes) => {
@@ -148,7 +148,7 @@ async function scrapeProposalData(url) {
       return null; // Return null if proposal is not found or has invalid data
     }
 
-    console.log('Proposal Data:', proposalData);
+    console.log(`Proposal ${url} Data:`, proposalData);
     await browser.close();
     return proposalData;
 
@@ -202,18 +202,6 @@ function saveKnownProposals(knownProposals) {
 module.exports = {
   scrapeProposalData,
   scrapeAllProposals,
-  saveKnownProposals
+  saveKnownProposals,
+  scrapeVotes
 };
-
-// Utility function for testing and running the script
-if (require.main === module) {
-  const knownProposalsFile = 'knownProposals.json';
-  let knownProposals = {};
-
-  if (fs.existsSync(knownProposalsFile)) {
-    knownProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
-  }
-
-  const client = {}; // Mock client for testing
-  scrapeAllProposals(knownProposals, client).catch(error => console.error('Error in scrapeAllProposals:', error));
-}
