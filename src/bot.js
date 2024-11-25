@@ -1,10 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 const { Client, GatewayIntentBits } = require('discord.js');
-const { scrapeAllProposals, saveKnownProposals } = require('./utils/puppeteerUtils');
+const { scrapeAllProposals } = require('./utils/puppeteerUtils');
 const validateProposals = require('./validateProposals');
 const config = require(path.resolve(__dirname, '../config/config.json'));
-const commandHandler = require('./handlers/commandHandler');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
@@ -48,9 +47,6 @@ client.once('ready', async () => {
     Usage: !proposalvotes <proposal_number>
   `);
 
-  // Initialize command handler
-  commandHandler(client);
-
   // Start the continuous execution
   startContinuousExecution();
 });
@@ -65,9 +61,6 @@ async function startContinuousExecution() {
 
       // Validate proposals after scraping
       await validateProposals(client, knownProposals);
-
-      // Optionally save known proposals to file
-      // saveKnownProposals(knownProposals);
 
     } catch (error) {
       console.error('Error in scrape and validate proposals:', error);
