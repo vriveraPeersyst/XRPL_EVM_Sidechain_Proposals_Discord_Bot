@@ -5,6 +5,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const puppeteerUtils = require('./utils/puppeteerUtils');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
+const { notifyNewStatus } = require('./handlers/notifyNewStatus'); // Import notifyNewStatus
 
 const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
 
@@ -23,6 +24,12 @@ async function validateProposals(client, knownProposals) {
 
   for (const proposalKey in knownProposals) {
     const proposalData = knownProposals[proposalKey];
+
+    // Skip proposals that have state 'Passed'
+    if (proposalData.state === 'Passed' || proposalData.state === 'Rejected' ) {
+      continue;
+    }
+
     let needsUpdate = false;
 
     // Check for missing fields
@@ -40,10 +47,29 @@ async function validateProposals(client, knownProposals) {
       '#',
       ''
     )}`;
-    const scrapedVotes = await puppeteerUtils.scrapeVotes(url);
+
+    // Scrape the updated proposal data
+    const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
+    if (!updatedProposalData) {
+      console.log(`Could not scrape data for proposal ${proposalKey}`);
+      continue;
+    }
+
+    // Detect state change
+    const oldState = proposalData.state;
+    const newState = updatedProposalData.state;
+    if (oldState !== newState) {
+      console.log(
+        `State change detected for proposal ${proposalKey}: ${oldState} -> ${newState}`
+      );
+      notifyNewStatus(client, proposalKey, oldState, newState); // Notify about state change
+      proposalData.state = newState; // Update the state in knownProposals
+      needsUpdate = true;
+    }
 
     // Detect new votes
     const currentVotes = proposalData.votes || [];
+    const scrapedVotes = updatedProposalData.votes || [];
     const newVotes = scrapedVotes.filter(
       (vote) =>
         !currentVotes.some(
@@ -61,11 +87,12 @@ async function validateProposals(client, knownProposals) {
     }
 
     if (needsUpdate) {
-      // Optionally re-scrape the entire proposal data if fields are missing
-      const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
-      if (updatedProposalData) {
-        knownProposals[proposalKey] = updatedProposalData;
+      // Update other fields if necessary
+      for (const field of fieldsToCheck) {
+        proposalData[field] = updatedProposalData[field];
       }
+      // Save the updated proposal data
+      knownProposals[proposalKey] = proposalData;
     }
   }
 
