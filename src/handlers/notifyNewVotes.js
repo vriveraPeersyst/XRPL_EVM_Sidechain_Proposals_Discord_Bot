@@ -28,12 +28,10 @@ function notifyNewVotes(client, proposalKey, newVotes) {
       .then(() => console.log(`Notification sent for proposal ${proposalKey}`))
       .catch(error => console.error('Error sending message:', error));
   }
-  
 
 const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
 let previousProposals = {};
 
-// Load known proposals from file
 if (fs.existsSync(knownProposalsFile)) {
   previousProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
 }

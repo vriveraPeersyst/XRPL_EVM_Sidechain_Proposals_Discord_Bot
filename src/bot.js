@@ -12,7 +12,6 @@ const knownProposalsFile = 'knownProposals.json';
 
 let knownProposals = {};
 
-// Load known proposals from file
 if (fs.existsSync(knownProposalsFile)) {
   knownProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
 }
@@ -20,7 +19,6 @@ if (fs.existsSync(knownProposalsFile)) {
 client.once('ready', async () => {
   console.log('Bot is ready!');
 
-  // Log commands information at startup
   console.log(`
     Active Proposals
 
@@ -47,7 +45,6 @@ client.once('ready', async () => {
     Usage: !proposalvotes <proposal_number>
   `);
 
-  // Start the continuous execution
   startContinuousExecution();
 });
 
@@ -56,16 +53,13 @@ async function startContinuousExecution() {
     try {
       console.log('Starting scrape and validate proposals...');
 
-      // Scrape all proposals
       await scrapeAllProposals(knownProposals, client);
 
-      // Validate proposals after scraping
       await validateProposals(client, knownProposals);
 
     } catch (error) {
       console.error('Error in scrape and validate proposals:', error);
     }
-    // Immediately proceed to the next iteration
   }
 }
 

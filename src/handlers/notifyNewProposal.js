@@ -5,7 +5,6 @@ const config = require(path.resolve(__dirname, '../../config/config.json'));
 const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
 let previousProposals = {};
 
-// Load known proposals from file
 if (fs.existsSync(knownProposalsFile)) {
   previousProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
 }

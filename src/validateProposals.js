@@ -5,7 +5,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const puppeteerUtils = require('./utils/puppeteerUtils');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
-const { notifyNewStatus } = require('./handlers/notifyNewStatus'); // Import notifyNewStatus
+const { notifyNewStatus } = require('./handlers/notifyNewStatus');
 
 const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
 
@@ -25,14 +25,12 @@ async function validateProposals(client, knownProposals) {
   for (const proposalKey in knownProposals) {
     const proposalData = knownProposals[proposalKey];
 
-    // Skip proposals that have state 'Passed'
     if (proposalData.state === 'Passed' || proposalData.state === 'Rejected' ) {
       continue;
     }
 
     let needsUpdate = false;
 
-    // Check for missing fields
     for (const field of fieldsToCheck) {
       if (proposalData[field] === 'Not Found') {
         needsUpdate = true;
@@ -48,26 +46,23 @@ async function validateProposals(client, knownProposals) {
       ''
     )}`;
 
-    // Scrape the updated proposal data
     const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
     if (!updatedProposalData) {
       console.log(`Could not scrape data for proposal ${proposalKey}`);
       continue;
     }
 
-    // Detect state change
     const oldState = proposalData.state;
     const newState = updatedProposalData.state;
     if (oldState !== newState) {
       console.log(
         `State change detected for proposal ${proposalKey}: ${oldState} -> ${newState}`
       );
-      notifyNewStatus(client, proposalKey, oldState, newState); // Notify about state change
-      proposalData.state = newState; // Update the state in knownProposals
+      notifyNewStatus(client, proposalKey, oldState, newState);
+      proposalData.state = newState;
       needsUpdate = true;
     }
 
-    // Detect new votes
     const currentVotes = proposalData.votes || [];
     const scrapedVotes = updatedProposalData.votes || [];
     const newVotes = scrapedVotes.filter(
@@ -81,22 +76,18 @@ async function validateProposals(client, knownProposals) {
     if (newVotes.length > 0) {
       needsUpdate = true;
       console.log(`New votes detected for proposal ${proposalKey}:`, newVotes);
-      // Update the proposal's votes
       proposalData.votes = scrapedVotes;
-      notifyNewVotes(client, proposalKey, newVotes); // Notify about new votes
+      notifyNewVotes(client, proposalKey, newVotes);
     }
 
     if (needsUpdate) {
-      // Update other fields if necessary
       for (const field of fieldsToCheck) {
         proposalData[field] = updatedProposalData[field];
       }
-      // Save the updated proposal data
       knownProposals[proposalKey] = proposalData;
     }
   }
 
-  // After updating proposals, save the knownProposals back to the file
   fs.writeFileSync(knownProposalsFile, JSON.stringify(knownProposals, null, 2));
   console.log('Known proposals updated and saved to file.');
 }
