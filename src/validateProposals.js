@@ -41,7 +41,7 @@ async function validateProposals(client, knownProposals) {
 
     const baseUrl = process.env.BASE_PROPOSAL_URL
 
-    const url = `${baseUrl}/${proposalKey.replace(
+    const url = `${baseUrl}${proposalKey.replace(
       '#',
       ''
     )}`;

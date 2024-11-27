@@ -19,29 +19,6 @@ client.once('ready', async () => {
   console.log('Bot is ready!');
 
   console.log(`
-    Active Proposals
-
-    Name: activeproposals
-    Description: Lists all active proposals.
-    Usage: !activeproposals
-
-    Explain AI
-
-    Name: explainai
-    Description: Get an AI-generated explanation for a proposal message.
-    Usage: !explainai <proposal_number>
-
-    Proposal Information
-
-    Name: proposal
-    Description: Get information about a specific proposal.
-    Usage: !proposal <proposal_number>
-
-    Proposal Votes
-
-    Name: proposalvotes
-    Description: Get validator votes for a specific proposal.
-    Usage: !proposalvotes <proposal_number>
   `);
 
   // Function to perform scraping and validation
