@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const { notifyNewProposal } = require('../handlers/notifyNewProposal');
+require('dotenv').config();
 
 async function scrapeVotes(url) {
   const browser = await puppeteer.launch({ headless: true });
@@ -30,7 +31,7 @@ async function scrapeVotes(url) {
           const vote = row.querySelector('td:nth-child(2)')?.textContent.trim() || '';
 
           if (vote && validVotes.includes(vote)) {
-            const voterName = (namePart1 + namePart2).replace(/\s+/g, ''); // Combine parts without spaces
+            const voterName = (namePart1 + namePart2).replace(/\s+/g, ''); 
             votes.push({ name: voterName, vote });
           }
         });
@@ -38,7 +39,7 @@ async function scrapeVotes(url) {
         return votes;
       }, validVotes);
 
-      console.log('Votes extracted:', votes); // Log extracted votes
+      console.log('Votes extracted:', votes); 
 
       if (JSON.stringify(votes) === JSON.stringify(previousVotes)) {
         console.log('No new votes found. Breaking the while loop.');
@@ -60,15 +61,15 @@ async function scrapeVotes(url) {
               const loadMoreButton = document.evaluate(loadMoreButtonXPath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
               if (loadMoreButton) {
                 loadMoreButton.click();
-                clearInterval(interval); // Stop interval after clicking
+                clearInterval(interval); 
                 resolve();
               }
-            }, 5000); // Check every 5 seconds
+            }, 5000); 
           });
         }, loadMoreButtonXPath);
 
         // Wait for the new content to appear
-        await page.waitForSelector(selector, { timeout: 60000 }); // Wait additional time to ensure content loads
+        await page.waitForSelector(selector, { timeout: 60000 }); 
       } else {
         console.log('No more content to load. Breaking the while loop.');
         break;
@@ -77,7 +78,7 @@ async function scrapeVotes(url) {
       pageNumber++;
     }
 
-    // Remove duplicate votes
+ 
     const uniqueVotes = allVotes.reduce((acc, vote) => {
       if (!acc.find(v => v.name === vote.name)) {
         acc.push(vote);
@@ -145,7 +146,7 @@ async function scrapeProposalData(url) {
       const voteData = await scrapeVotes(url);
       proposalData.votes = voteData;
     } else {
-      return null; // Return null if proposal is not found or has invalid data
+      return null; 
     }
 
     console.log(`Proposal ${url} Data:`, proposalData);
@@ -161,23 +162,23 @@ async function scrapeProposalData(url) {
 
 
 async function scrapeAllProposals(knownProposals, client) {
-  const baseUrl = 'https://governance.xrplevm.org/xrplevm/proposals/';
+  const baseUrl = process.env.BASE_PROPOSAL_URL;
   let proposalNumber = 1;
   let missingProposals = 0;
 
-  while (missingProposals < 1) {  // Stop after 1 consecutive missing proposals
+  while (missingProposals < 1) { 
     const url = `${baseUrl}${proposalNumber}`;
     console.log(`Checking URL: ${url}`);
     
-    // Check if the proposal already exists
+
     if (!knownProposals[`#${proposalNumber}`]) {
       const proposalData = await scrapeProposalData(url);
 
       if (proposalData) {
         knownProposals[`#${proposalNumber}`] = proposalData;
-        missingProposals = 0; // Reset missing proposals count
-        saveKnownProposals(knownProposals); // Save only if the proposal is valid
-        notifyNewProposal(client, proposalData); // Notify channel about the new proposal
+        missingProposals = 0; 
+        saveKnownProposals(knownProposals); 
+        notifyNewProposal(client, proposalData); 
       } else {
         console.log(`Proposal ${proposalNumber} not found or invalid.`);
         missingProposals++;

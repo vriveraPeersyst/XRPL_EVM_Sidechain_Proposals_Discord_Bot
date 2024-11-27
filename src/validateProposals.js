@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const config = require(path.resolve(__dirname, '../config/config.json'));
-const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const puppeteerUtils = require('./utils/puppeteerUtils');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
+const { notifyNewStatus } = require('./handlers/notifyNewStatus');
 
 const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
 
@@ -23,9 +22,13 @@ async function validateProposals(client, knownProposals) {
 
   for (const proposalKey in knownProposals) {
     const proposalData = knownProposals[proposalKey];
+
+    if (proposalData.state === 'Passed' || proposalData.state === 'Rejected' ) {
+      continue;
+    }
+
     let needsUpdate = false;
 
-    // Check for missing fields
     for (const field of fieldsToCheck) {
       if (proposalData[field] === 'Not Found') {
         needsUpdate = true;
@@ -36,14 +39,32 @@ async function validateProposals(client, knownProposals) {
       }
     }
 
-    const url = `https://governance.xrplevm.org/xrplevm/proposals/${proposalKey.replace(
+    const baseUrl = process.env.BASE_PROPOSAL_URL
+
+    const url = `${baseUrl}/${proposalKey.replace(
       '#',
       ''
     )}`;
-    const scrapedVotes = await puppeteerUtils.scrapeVotes(url);
 
-    // Detect new votes
+    const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
+    if (!updatedProposalData) {
+      console.log(`Could not scrape data for proposal ${proposalKey}`);
+      continue;
+    }
+
+    const oldState = proposalData.state;
+    const newState = updatedProposalData.state;
+    if (oldState !== newState) {
+      console.log(
+        `State change detected for proposal ${proposalKey}: ${oldState} -> ${newState}`
+      );
+      notifyNewStatus(client, proposalKey, oldState, newState);
+      proposalData.state = newState;
+      needsUpdate = true;
+    }
+
     const currentVotes = proposalData.votes || [];
+    const scrapedVotes = updatedProposalData.votes || [];
     const newVotes = scrapedVotes.filter(
       (vote) =>
         !currentVotes.some(
@@ -55,21 +76,18 @@ async function validateProposals(client, knownProposals) {
     if (newVotes.length > 0) {
       needsUpdate = true;
       console.log(`New votes detected for proposal ${proposalKey}:`, newVotes);
-      // Update the proposal's votes
       proposalData.votes = scrapedVotes;
-      notifyNewVotes(client, proposalKey, newVotes); // Notify about new votes
+      notifyNewVotes(client, proposalKey, newVotes);
     }
 
     if (needsUpdate) {
-      // Optionally re-scrape the entire proposal data if fields are missing
-      const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
-      if (updatedProposalData) {
-        knownProposals[proposalKey] = updatedProposalData;
+      for (const field of fieldsToCheck) {
+        proposalData[field] = updatedProposalData[field];
       }
+      knownProposals[proposalKey] = proposalData;
     }
   }
 
-  // After updating proposals, save the knownProposals back to the file
   fs.writeFileSync(knownProposalsFile, JSON.stringify(knownProposals, null, 2));
   console.log('Known proposals updated and saved to file.');
 }

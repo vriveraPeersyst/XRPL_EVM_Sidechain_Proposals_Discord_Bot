@@ -1,19 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 const { Client, GatewayIntentBits } = require('discord.js');
-const { scrapeAllProposals, saveKnownProposals } = require('./utils/puppeteerUtils');
+const { scrapeAllProposals } = require('./utils/puppeteerUtils');
 const validateProposals = require('./validateProposals');
-const config = require(path.resolve(__dirname, '../config/config.json'));
-const commandHandler = require('./handlers/commandHandler');
-
+require('dotenv').config();
+const cron = require('node-cron');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-const channelId = config.channelid;
 const knownProposalsFile = 'knownProposals.json';
 
 let knownProposals = {};
 
-// Load known proposals from file
 if (fs.existsSync(knownProposalsFile)) {
   knownProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
 }
@@ -21,7 +18,6 @@ if (fs.existsSync(knownProposalsFile)) {
 client.once('ready', async () => {
   console.log('Bot is ready!');
 
-  // Log commands information at startup
   console.log(`
     Active Proposals
 
@@ -48,32 +44,36 @@ client.once('ready', async () => {
     Usage: !proposalvotes <proposal_number>
   `);
 
-  // Initialize command handler
-  commandHandler(client);
+  // Function to perform scraping and validation
+  async function executeTasks() {
+    if (executeTasks.isRunning) {
+      console.log('Previous execution still running. Skipping this interval.');
+      return;
+    }
 
-  // Start the continuous execution
-  startContinuousExecution();
-});
-
-async function startContinuousExecution() {
-  while (true) {
+    executeTasks.isRunning = true;
     try {
       console.log('Starting scrape and validate proposals...');
 
-      // Scrape all proposals
       await scrapeAllProposals(knownProposals, client);
-
-      // Validate proposals after scraping
       await validateProposals(client, knownProposals);
 
-      // Optionally save known proposals to file
-      // saveKnownProposals(knownProposals);
-
+      console.log('Scrape and validate proposals completed.');
     } catch (error) {
       console.error('Error in scrape and validate proposals:', error);
+    } finally {
+      executeTasks.isRunning = false;
     }
-    // Immediately proceed to the next iteration
   }
-}
 
-client.login(config.token);
+  // Schedule the task to run every minute
+  cron.schedule('* * * * *', () => {
+    console.log('Cron job triggered at', new Date().toLocaleString());
+    executeTasks();
+  });
+
+  // Optionally, execute immediately on startup
+  await executeTasks();
+});
+
+client.login(process.env.DISCORD_BOT_TOKEN);
