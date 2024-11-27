@@ -4,8 +4,9 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const { scrapeAllProposals } = require('./utils/puppeteerUtils');
 const validateProposals = require('./validateProposals');
 const config = require(path.resolve(__dirname, '../config/config.json'));
-
+const cron = require('node-cron');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+
 
 const channelId = config.channelid;
 const knownProposalsFile = 'knownProposals.json';
@@ -45,22 +46,36 @@ client.once('ready', async () => {
     Usage: !proposalvotes <proposal_number>
   `);
 
-  startContinuousExecution();
-});
+  // Function to perform scraping and validation
+  async function executeTasks() {
+    if (executeTasks.isRunning) {
+      console.log('Previous execution still running. Skipping this interval.');
+      return;
+    }
 
-async function startContinuousExecution() {
-  while (true) {
+    executeTasks.isRunning = true;
     try {
       console.log('Starting scrape and validate proposals...');
 
       await scrapeAllProposals(knownProposals, client);
-
       await validateProposals(client, knownProposals);
 
+      console.log('Scrape and validate proposals completed.');
     } catch (error) {
       console.error('Error in scrape and validate proposals:', error);
+    } finally {
+      executeTasks.isRunning = false;
     }
   }
-}
+
+  // Schedule the task to run every minute
+  cron.schedule('* * * * *', () => {
+    console.log('Cron job triggered at', new Date().toLocaleString());
+    executeTasks();
+  });
+
+  // Optionally, execute immediately on startup
+  await executeTasks();
+});
 
 client.login(config.token);
