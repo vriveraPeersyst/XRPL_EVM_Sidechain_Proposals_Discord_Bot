@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const config = require(path.resolve(__dirname, '../../config/config.json'));
+require('dotenv').config();
 
 
 
 function notifyNewVotes(client, proposalKey, newVotes) {
-    const channelId = config.channelid;
+    const channelId = process.env.DISCORD_CHANNEL_ID;
     const channel = client.channels.cache.get(channelId);
   
     if (!channel) {

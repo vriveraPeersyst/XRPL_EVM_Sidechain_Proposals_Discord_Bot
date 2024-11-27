@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const config = require(path.resolve(__dirname, '../config/config.json'));
-const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const puppeteerUtils = require('./utils/puppeteerUtils');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
@@ -41,7 +39,9 @@ async function validateProposals(client, knownProposals) {
       }
     }
 
-    const url = `https://governance.xrplevm.org/xrplevm/proposals/${proposalKey.replace(
+    const baseUrl = process.env.BASE_PROPOSAL_URL
+
+    const url = `${baseUrl}/${proposalKey.replace(
       '#',
       ''
     )}`;

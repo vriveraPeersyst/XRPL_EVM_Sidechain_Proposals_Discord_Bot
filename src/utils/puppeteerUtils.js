@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const { notifyNewProposal } = require('../handlers/notifyNewProposal');
+require('dotenv').config();
 
 async function scrapeVotes(url) {
   const browser = await puppeteer.launch({ headless: true });
@@ -161,7 +162,7 @@ async function scrapeProposalData(url) {
 
 
 async function scrapeAllProposals(knownProposals, client) {
-  const baseUrl = 'https://governance.xrplevm.org/xrplevm/proposals/';
+  const baseUrl = process.env.BASE_PROPOSAL_URL;
   let proposalNumber = 1;
   let missingProposals = 0;
 

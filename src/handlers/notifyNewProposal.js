@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const config = require(path.resolve(__dirname, '../../config/config.json'));
+require('dotenv').config();
 
 const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
 let previousProposals = {};
@@ -10,7 +10,7 @@ if (fs.existsSync(knownProposalsFile)) {
 }
 
 function notifyNewProposal(client, proposalData) {
-  const channelId = config.channelid;
+  const channelId = process.env.DISCORD_CHANNEL_ID;
   const channel = client.channels.cache.get(channelId);
   
   if (!channel) {

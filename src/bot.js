@@ -3,12 +3,10 @@ const fs = require('fs');
 const { Client, GatewayIntentBits } = require('discord.js');
 const { scrapeAllProposals } = require('./utils/puppeteerUtils');
 const validateProposals = require('./validateProposals');
-const config = require(path.resolve(__dirname, '../config/config.json'));
+require('dotenv').config();
 const cron = require('node-cron');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-
-const channelId = config.channelid;
 const knownProposalsFile = 'knownProposals.json';
 
 let knownProposals = {};
@@ -78,4 +76,4 @@ client.once('ready', async () => {
   await executeTasks();
 });
 
-client.login(config.token);
+client.login(process.env.DISCORD_BOT_TOKEN);
