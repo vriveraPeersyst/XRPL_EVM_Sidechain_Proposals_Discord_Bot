@@ -4,7 +4,10 @@ const { notifyNewProposal } = require('../handlers/notifyNewProposal');
 require('dotenv').config();
 
 async function scrapeVotes(url) {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'], // Add these flags
+  });
   const page = await browser.newPage();
 
   try {
@@ -97,7 +100,10 @@ async function scrapeVotes(url) {
 }
 
 async function scrapeProposalData(url) {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'], // Add these flags
+  });
   const page = await browser.newPage();
 
   try {

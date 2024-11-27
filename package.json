@@ -23,7 +23,7 @@
     "fs": "^0.0.1-security",
     "node-cron": "^3.0.3",
     "openai": "^4.52.0",
-    "puppeteer": "^22.11.1",
+    "puppeteer": "^23.9.0",
     "xmldom": "^0.6.0",
     "xpath": "^0.0.34"
   },
