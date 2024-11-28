@@ -17,9 +17,9 @@ if (fs.existsSync(knownProposalsFile)) {
  * @param {object} client - Discord client instance
  * @param {string} proposalKey - The proposal identifier
  * @param {array} newVotes - Array of newly registered votes
- * @param {array} allVotes - Array of all votes for the proposal
+ * @param {array} currentVotes - Array of current votes for the proposal
  */
-function notifyNewVotes(client, proposalKey, newVotes, allVotes = []) {
+function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
   const channel = client.channels.cache.get(channelId);
 
@@ -28,11 +28,14 @@ function notifyNewVotes(client, proposalKey, newVotes, allVotes = []) {
     return;
   }
 
-  // Ensure allVotes is an array
-  if (!Array.isArray(allVotes)) {
-    console.error(`Invalid allVotes input for proposal ${proposalKey}:`, allVotes);
-    allVotes = [];
+  // Ensure currentVotes is an array
+  if (!Array.isArray(currentVotes)) {
+    console.error(`Invalid currentVotes input for proposal ${proposalKey}:`, currentVotes);
+    currentVotes = [];
   }
+
+  // Combine currentVotes and newVotes to calculate total votes
+  const allVotes = [...currentVotes, ...newVotes];
 
   const getVoteEmoji = (vote) => {
     if (vote.includes('yes')) return '✅';
