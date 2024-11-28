@@ -34,7 +34,7 @@ function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
   };
 
   const embed = new EmbedBuilder()
-    .setTitle(`📢 Status Update for Proposal ${proposalKey}`)
+    .setTitle(`Proposal ${proposalKey} Status Update`)
     .addFields(
       { name: 'Previous Status', value: formatStatus(oldStatus), inline: true },
       { name: 'New Status', value: formatStatus(newStatus), inline: true }

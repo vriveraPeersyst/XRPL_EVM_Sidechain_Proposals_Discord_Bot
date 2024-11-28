@@ -32,8 +32,8 @@ function notifyNewProposal(client, proposalData) {
 
   const statusMap = {
     PROPOSAL_STATUS_UNSPECIFIED: { emoji: '❓', label: 'Unspecified' },
-    PROPOSAL_STATUS_DEPOSIT_PERIOD: { emoji: '💰', label: 'Deposit Period' },
-    PROPOSAL_STATUS_VOTING_PERIOD: { emoji: '🗳', label: 'Voting Period' },
+    PROPOSAL_STATUS_DEPOSIT_PERIOD: { emoji: '💰', label: 'Depositing' },
+    PROPOSAL_STATUS_VOTING_PERIOD: { emoji: '🗳', label: 'Voting' },
     PROPOSAL_STATUS_PASSED: { emoji: '✅', label: 'Passed' },
     PROPOSAL_STATUS_REJECTED: { emoji: '❌', label: 'Rejected' },
     PROPOSAL_STATUS_FAILED: { emoji: '🛑', label: 'Failed' },
@@ -45,7 +45,7 @@ function notifyNewProposal(client, proposalData) {
   };
 
   const embed = new EmbedBuilder()
-    .setTitle(`📢 [${formatStatus(proposalData.state)}] Proposal ${proposalData.number}`)
+    .setTitle(`[${formatStatus(proposalData.state)}] ${proposalData.number} ${proposalData.title}`)
     .setDescription(proposalData.message || 'No summary provided.')
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },

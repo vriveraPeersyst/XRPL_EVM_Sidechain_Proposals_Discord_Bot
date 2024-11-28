@@ -53,7 +53,7 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
 
   // Construct the embed message
   const embed = new EmbedBuilder()
-    .setTitle(`📢 New Votes Registered for Proposal ${proposalKey}`)
+    .setTitle(`New Votes! Proposal ${proposalKey}`)
     .setDescription(
       newVotes.map(vote => `${getVoteEmoji(vote.vote)} **${vote.name}**`).join('\n') || 'No new votes.'
     )
