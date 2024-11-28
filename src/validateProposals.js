@@ -82,7 +82,7 @@ async function validateProposals(client, knownProposals) {
       needsUpdate = true;
       console.log(`New votes detected for proposal ${proposalKey}:`, newVotes);
       proposalData.votes = updatedProposalData.votes; // Update to full vote list
-      notifyNewVotes(client, proposalKey, newVotes);
+      notifyNewVotes(client, proposalKey, newVotes, currentVotes);
     }
 
     if (needsUpdate) {
