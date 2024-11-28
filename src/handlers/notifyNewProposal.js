@@ -49,8 +49,7 @@ function notifyNewProposal(client, proposalData) {
     .setDescription(proposalData.message || 'No summary provided.')
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },
-      { name: 'Voting Period', value: `${formatUTCDate(proposalData.votingStartTime)} → ${formatUTCDate(proposalData.votingEndTime)}`, inline: true },
-      { name: 'Deposit Period', value: `${formatUTCDate(proposalData.submitTime)} → ${formatUTCDate(proposalData.depositEndTime)}`, inline: true },
+      { name: 'Voting Ends:', value: `${formatUTCDate(proposalData.votingEndTime)}`, inline: true },
       {
         name: 'Voting Results',
         value:
