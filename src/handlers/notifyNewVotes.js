@@ -13,15 +13,21 @@ function notifyNewVotes(client, proposalKey, newVotes) {
       return;
     }
   
-    const messageHeader = `📣 **NEW VOTES REGISTERED FOR PROPOSAL ${proposalKey}!**\n\n`;
+    const getVoteEmoji = (vote) => {
+      if (vote.includes('yes')) return '✅';
+      if (vote.includes('no')) return '❌';
+      if (vote.includes('veto')) return '🛑';
+      if (vote.includes('abstain')) return '🔵';
+      return '❓'; // Fallback for unknown vote types
+    };
+  
+    const messageHeader = `📢 **New Votes Registered for Proposal ${proposalKey}!**\n\n`;
     const messageBody = newVotes
-      .map(
-        (vote) =>
-          `**Voter:** ${vote.name}\n**Vote:** ${vote.vote}\n`
-      )
+      .map(vote => `${getVoteEmoji(vote.vote)} **${vote.name}**`)
       .join('\n');
   
-    const message = messageHeader + messageBody;
+    const message = messageHeader + `### Vote Details\n` + messageBody;
+  
   
     channel
       .send(message)

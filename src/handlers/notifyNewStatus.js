@@ -10,9 +10,24 @@ function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
     return;
   }
 
-  const message = `📣 **STATUS UPDATE FOR PROPOSAL ${proposalKey}!**\n\n` +
-                  `**Previous Status:** ${oldStatus}\n` +
-                  `**New Status:** ${newStatus}\n`;
+  const statusMap = {
+    PROPOSAL_STATUS_UNSPECIFIED: { emoji: '❓', label: 'Unspecified' },
+    PROPOSAL_STATUS_DEPOSIT_PERIOD: { emoji: '💰', label: 'Deposit Period' },
+    PROPOSAL_STATUS_VOTING_PERIOD: { emoji: '🗳', label: 'Voting Period' },
+    PROPOSAL_STATUS_PASSED: { emoji: '✅', label: 'Passed' },
+    PROPOSAL_STATUS_REJECTED: { emoji: '❌', label: 'Rejected' },
+    PROPOSAL_STATUS_FAILED: { emoji: '🛑', label: 'Failed' },
+  };
+
+  const formatStatus = (status) => {
+    const mappedStatus = statusMap[status] || { emoji: 'ℹ️', label: 'Unknown Status' };
+    return `${mappedStatus.emoji} ${mappedStatus.label}`;
+  };
+
+  const message = `📢 **Status Update for Proposal ${proposalKey}!**\n\n` +
+                  `🔄 **Previous Status**: ${formatStatus(oldStatus)}\n` +
+                  `✅ **New Status**: ${formatStatus(newStatus)}\n` +
+                  `\n📖 Stay tuned for further updates!`;
 
   channel.send(message)
     .then(() => console.log(`Status update notification sent for proposal ${proposalKey}`))

@@ -1,11 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
-const puppeteerUtils = require('./utils/puppeteerUtils');
+const cosmosGovApi = require('./utils/cosmosGovApi');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
 const { notifyNewStatus } = require('./handlers/notifyNewStatus');
 
 const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
+
+function normalizeVote(vote) {
+  return {
+    name: String(vote.name || '').trim().toLowerCase(),
+    vote: String(vote.vote || '').trim().toLowerCase(),
+  };
+}
+
+function areVotesEqual(vote1, vote2) {
+  const normVote1 = normalizeVote(vote1);
+  const normVote2 = normalizeVote(vote2);
+  return normVote1.name === normVote2.name && normVote1.vote === normVote2.vote;
+}
 
 async function validateProposals(client, knownProposals) {
   const fieldsToCheck = [
@@ -23,7 +36,7 @@ async function validateProposals(client, knownProposals) {
   for (const proposalKey in knownProposals) {
     const proposalData = knownProposals[proposalKey];
 
-    if (proposalData.state === 'Passed' || proposalData.state === 'Rejected' ) {
+    if (proposalData.state === 'PROPOSAL_STATUS_PASSED' || proposalData.state === 'PROPOSAL_STATUS_REJECTED' || proposalData.state === 'Passed' || proposalData.state === 'Rejected') {
       continue;
     }
 
@@ -39,14 +52,10 @@ async function validateProposals(client, knownProposals) {
       }
     }
 
-    const baseUrl = process.env.BASE_PROPOSAL_URL
-
-    const url = `${baseUrl}${proposalKey.replace(
+    const updatedProposalData = await cosmosGovApi.scrapeProposalData(proposalKey.replace(
       '#',
       ''
-    )}`;
-
-    const updatedProposalData = await puppeteerUtils.scrapeProposalData(url);
+    ));
     if (!updatedProposalData) {
       console.log(`Could not scrape data for proposal ${proposalKey}`);
       continue;
@@ -63,20 +72,16 @@ async function validateProposals(client, knownProposals) {
       needsUpdate = true;
     }
 
-    const currentVotes = proposalData.votes || [];
-    const scrapedVotes = updatedProposalData.votes || [];
+    const currentVotes = proposalData.votes.map(normalizeVote);
+    const scrapedVotes = (updatedProposalData.votes || []).map(normalizeVote);
     const newVotes = scrapedVotes.filter(
-      (vote) =>
-        !currentVotes.some(
-          (existingVote) =>
-            existingVote.name === vote.name && existingVote.vote === vote.vote
-        )
+      (vote) => !currentVotes.some((existingVote) => areVotesEqual(existingVote, vote))
     );
 
     if (newVotes.length > 0) {
       needsUpdate = true;
       console.log(`New votes detected for proposal ${proposalKey}:`, newVotes);
-      proposalData.votes = scrapedVotes;
+      proposalData.votes = updatedProposalData.votes; // Update to full vote list
       notifyNewVotes(client, proposalKey, newVotes);
     }
 

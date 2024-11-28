@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { Client, GatewayIntentBits } = require('discord.js');
-const { scrapeAllProposals } = require('./utils/puppeteerUtils');
+const { scrapeAllProposals } = require('./utils/cosmosGovApi');
 const validateProposals = require('./validateProposals');
 require('dotenv').config();
 const cron = require('node-cron');
