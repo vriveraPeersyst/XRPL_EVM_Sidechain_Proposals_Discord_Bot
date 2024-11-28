@@ -23,7 +23,6 @@ function formatUTCDate(date) {
 
 function notifyNewProposal(client, proposalData) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
-  const governanceRoleId = process.env.DISCORD_GOVERNANCE_ROLE_ID;
   const channel = client.channels.cache.get(channelId);
 
   if (!channel) {
@@ -64,7 +63,7 @@ function notifyNewProposal(client, proposalData) {
     .setColor('#00AAFF')
     .setFooter({ text: 'Proposal Notification', iconURL: client.user.avatarURL() });
 
-  channel.send({ content: `<@&${governanceRoleId}>`, embeds: [embed] }).catch(console.error);
+    channel.send({ embeds: [embed] }).catch(console.error);
 }
 
 module.exports = {
