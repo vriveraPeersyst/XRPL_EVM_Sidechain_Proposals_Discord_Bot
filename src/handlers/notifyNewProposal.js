@@ -31,17 +31,17 @@ function notifyNewProposal(client, proposalData) {
   }
 
   const statusMap = {
-    PROPOSAL_STATUS_UNSPECIFIED: { emoji: '❓', label: 'Unspecified' },
-    PROPOSAL_STATUS_DEPOSIT_PERIOD: { emoji: '💰', label: 'Depositing' },
-    PROPOSAL_STATUS_VOTING_PERIOD: { emoji: '🗳', label: 'Voting' },
-    PROPOSAL_STATUS_PASSED: { emoji: '✅', label: 'Passed' },
-    PROPOSAL_STATUS_REJECTED: { emoji: '❌', label: 'Rejected' },
-    PROPOSAL_STATUS_FAILED: { emoji: '🛑', label: 'Failed' },
+    PROPOSAL_STATUS_UNSPECIFIED: { label: 'Unspecified' },
+    PROPOSAL_STATUS_DEPOSIT_PERIOD: { label: 'Depositing' },
+    PROPOSAL_STATUS_VOTING_PERIOD: { label: 'Voting' },
+    PROPOSAL_STATUS_PASSED: { label: 'Passed' },
+    PROPOSAL_STATUS_REJECTED: { label: 'Rejected' },
+    PROPOSAL_STATUS_FAILED: { label: 'Failed' },
   };
 
   const formatStatus = (status) => {
-    const mappedStatus = statusMap[status] || { emoji: 'ℹ️', label: 'Unknown Status' };
-    return `${mappedStatus.emoji} ${mappedStatus.label}`;
+    const mappedStatus = statusMap[status] || { label: 'Unknown Status' };
+    return `${mappedStatus.label}`;
   };
 
   const embed = new EmbedBuilder()
