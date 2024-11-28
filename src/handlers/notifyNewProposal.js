@@ -10,6 +10,17 @@ if (fs.existsSync(knownProposalsFile)) {
   previousProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
 }
 
+/**
+ * Format a date to UTC with minutes only.
+ * 
+ * @param {string} date - ISO string or Date object
+ * @returns {string} Formatted date string
+ */
+function formatUTCDate(date) {
+  const d = new Date(date);
+  return d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+}
+
 function notifyNewProposal(client, proposalData) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
   const channel = client.channels.cache.get(channelId);
@@ -38,8 +49,8 @@ function notifyNewProposal(client, proposalData) {
     .setDescription(proposalData.message || 'No summary provided.')
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },
-      { name: 'Voting Period', value: `${proposalData.votingStartTime} → ${proposalData.votingEndTime}`, inline: true },
-      { name: 'Deposit Period', value: `${proposalData.submitTime} → ${proposalData.depositEndTime}`, inline: true },
+      { name: 'Voting Period', value: `${formatUTCDate(proposalData.votingStartTime)} → ${formatUTCDate(proposalData.votingEndTime)}`, inline: true },
+      { name: 'Deposit Period', value: `${formatUTCDate(proposalData.submitTime)} → ${formatUTCDate(proposalData.depositEndTime)}`, inline: true },
       {
         name: 'Voting Results',
         value:
