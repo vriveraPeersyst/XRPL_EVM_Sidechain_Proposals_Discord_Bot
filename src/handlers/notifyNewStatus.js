@@ -12,6 +12,7 @@ if (fs.existsSync(knownProposalsFile)) {
 
 function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
+  const governanceRoleId = process.env.DISCORD_GOVERNANCE_ROLE_ID;
   const channel = client.channels.cache.get(channelId);
 
   if (!channel) {
@@ -42,7 +43,7 @@ function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
     .setColor('#00AAFF')
     .setFooter({ text: 'Proposal Status Update', iconURL: client.user.avatarURL() });
 
-  channel.send({ embeds: [embed] })
+  channel.send({ content: `<@&${governanceRoleId}>`, embeds: [embed] })
     .then(() => console.log(`Status update notification sent for proposal ${proposalKey}`))
     .catch(error => console.error('Error sending message:', error));
 }

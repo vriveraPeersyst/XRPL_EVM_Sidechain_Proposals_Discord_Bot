@@ -21,6 +21,7 @@ if (fs.existsSync(knownProposalsFile)) {
  */
 function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
+  const governanceRoleId = process.env.DISCORD_GOVERNANCE_ROLE_ID;
   const channel = client.channels.cache.get(channelId);
 
   if (!channel) {
@@ -64,7 +65,7 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
     .setFooter({ text: 'Vote Update Notification', iconURL: client.user.avatarURL() });
 
   // Send the embed message
-  channel.send({ embeds: [embed] })
+  channel.send({ content: `<@&${governanceRoleId}>`, embeds: [embed] })
     .then(() => console.log(`Notification sent for proposal ${proposalKey}`))
     .catch(error => console.error('Error sending message:', error));
 }
