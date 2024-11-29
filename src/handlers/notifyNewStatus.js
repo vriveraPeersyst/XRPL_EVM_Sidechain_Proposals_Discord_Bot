@@ -1,13 +1,13 @@
+const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config();
-const { EmbedBuilder } = require('discord.js');
 
-const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
-let previousProposals = {};
+const threadMapFile = path.resolve(__dirname, '../../threadMap.json');
+let threadMap = {};
 
-if (fs.existsSync(knownProposalsFile)) {
-  previousProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
+// Load thread IDs from file
+if (fs.existsSync(threadMapFile)) {
+  threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
 }
 
 function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
@@ -16,6 +16,17 @@ function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
 
   if (!channel) {
     console.error('Channel not found');
+    return;
+  }
+
+  const threadId = threadMap[proposalKey.replace(
+    '#',
+    ''
+  )];
+  const thread = channel.threads.cache.get(threadId);
+
+  if (!thread) {
+    console.error(`Thread not found for Proposal #${proposalKey}`);
     return;
   }
 
@@ -42,8 +53,8 @@ function notifyNewStatus(client, proposalKey, oldStatus, newStatus) {
     .setColor('#00AAFF')
     .setFooter({ text: 'Proposal Status Update', iconURL: client.user.avatarURL() });
 
-  channel.send({ embeds: [embed] })
-    .then(() => console.log(`Status update notification sent for proposal ${proposalKey}`))
+  thread.send({ embeds: [embed] })
+    .then(() => console.log(`Status update notification sent for Proposal #${proposalKey}`))
     .catch(error => console.error('Error sending message:', error));
 }
 
