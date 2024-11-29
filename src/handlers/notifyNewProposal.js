@@ -44,9 +44,10 @@ function notifyNewProposal(client, proposalData) {
     return `${mappedStatus.label}`;
   };
 
+  const proposalUrl = `https://governance.xrplevm.org/xrplevm/proposals/${proposalData.number}`;
   const embed = new EmbedBuilder()
     .setTitle(`[${formatStatus(proposalData.state)}] #${proposalData.number} - ${proposalData.title}`)
-    .setDescription(proposalData.message || 'No summary provided.')
+    .setDescription(`[View Proposal Here](${proposalUrl})\n\n${proposalData.message || 'No summary provided.'}`)
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },
       { name: 'Voting Ends:', value: `${formatUTCDate(proposalData.votingEndTime)}`, inline: true },
@@ -57,13 +58,13 @@ function notifyNewProposal(client, proposalData) {
           `❌ No: ${proposalData.votes.filter(v => v.vote.includes('no')).length}\n` +
           `🛑 Veto: ${proposalData.votes.filter(v => v.vote.includes('veto')).length}\n` +
           `🔵 Abstain: ${proposalData.votes.filter(v => v.vote.includes('abstain')).length}`,
-        inline: false,
+        inline: false
       }
     )
     .setColor('#00AAFF')
     .setFooter({ text: 'Proposal Notification', iconURL: client.user.avatarURL() });
 
-    channel.send({ embeds: [embed] }).catch(console.error);
+  channel.send({ embeds: [embed] }).catch(console.error);
 }
 
 module.exports = {
