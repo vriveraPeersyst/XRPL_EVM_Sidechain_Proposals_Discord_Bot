@@ -1,27 +1,21 @@
+const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config();
-const { EmbedBuilder } = require('discord.js');
 
-const knownProposalsFile = path.resolve(__dirname, '../../knownProposals.json');
-let previousProposals = {};
+const threadMapFile = path.resolve(__dirname, '../../threadMap.json'); // File to store thread IDs
+let threadMap = {};
 
-if (fs.existsSync(knownProposalsFile)) {
-  previousProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
+// Load existing thread IDs from file
+if (fs.existsSync(threadMapFile)) {
+  threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
 }
 
-/**
- * Format a date to UTC with minutes only.
- * 
- * @param {string} date - ISO string or Date object
- * @returns {string} Formatted date string
- */
 function formatUTCDate(date) {
   const d = new Date(date);
   return d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 }
 
-function notifyNewProposal(client, proposalData) {
+async function notifyNewProposal(client, proposalData) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
   const channel = client.channels.cache.get(channelId);
 
@@ -64,7 +58,17 @@ function notifyNewProposal(client, proposalData) {
     .setColor('#00AAFF')
     .setFooter({ text: 'Proposal Notification', iconURL: client.user.avatarURL() });
 
-  channel.send({ embeds: [embed] }).catch(console.error);
+  const message = await channel.send({ embeds: [embed] });
+  const thread = await message.startThread({
+    name: `Proposal #${proposalData.number} Updates`,
+    autoArchiveDuration: 1440, // 24 hours
+  });
+
+  // Save the thread ID for this proposal
+  threadMap[proposalData.number] = thread.id;
+  fs.writeFileSync(threadMapFile, JSON.stringify(threadMap, null, 2), 'utf-8');
+
+  console.log(`Thread created for Proposal #${proposalData.number}: ${thread.id}`);
 }
 
 module.exports = {
