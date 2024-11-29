@@ -45,7 +45,7 @@ function notifyNewProposal(client, proposalData) {
   };
 
   const embed = new EmbedBuilder()
-    .setTitle(`[${formatStatus(proposalData.state)}] ${proposalData.number} ${proposalData.title}`)
+    .setTitle(`[${formatStatus(proposalData.state)}] #${proposalData.number} - ${proposalData.title}`)
     .setDescription(proposalData.message || 'No summary provided.')
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },
