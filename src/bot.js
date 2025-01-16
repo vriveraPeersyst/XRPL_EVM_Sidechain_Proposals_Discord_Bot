@@ -30,12 +30,13 @@ client.once('ready', async () => {
 
     executeTasks.isRunning = true;
     try {
-      console.log('Starting scrape and validate proposals...');
-
+      console.log('Starting scrape proposals...');
       await scrapeAllProposals(knownProposals, client);
-      await validateProposals(client, knownProposals);
+      console.log('Scrape proposals completed');
 
-      console.log('Scrape and validate proposals completed.');
+      console.log('Starting validate proposals...');
+      await validateProposals(client, knownProposals);
+      console.log('Validate proposals completed.');
     } catch (error) {
       console.error('Error in scrape and validate proposals:', error);
     } finally {

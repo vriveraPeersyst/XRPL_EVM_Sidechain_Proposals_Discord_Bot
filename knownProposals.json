@@ -2268,7 +2268,7 @@
   "#44": {
     "number": "44",
     "title": "Remove unbonded validators from the authority",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_FAILED",
     "submitTime": "2024-11-27T15:22:55.040816760Z",
     "depositEndTime": "2024-11-29T15:22:55.040816760Z",
     "votingStartTime": "2024-11-27T15:22:55.040816760Z",
@@ -2335,7 +2335,7 @@
   "#45": {
     "number": "45",
     "title": "Add Grove validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2024-11-27T15:28:03.820537994Z",
     "depositEndTime": "2024-11-29T15:28:03.820537994Z",
     "votingStartTime": "2024-11-27T15:28:03.820537994Z",
@@ -2402,7 +2402,7 @@
   "#46": {
     "number": "46",
     "title": "Add Latam Nodes validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2024-11-27T15:31:12.086890800Z",
     "depositEndTime": "2024-11-29T15:31:12.086890800Z",
     "votingStartTime": "2024-11-27T15:31:12.086890800Z",
@@ -2465,5 +2465,41 @@
         ]
       }
     ]
+  },
+  "#47": {
+    "number": "47",
+    "title": "Protocol upgrade to v5.0.0",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2024-12-09T15:07:44.767805507Z",
+    "depositEndTime": "2024-12-11T15:07:44.767805507Z",
+    "votingStartTime": "2024-12-09T15:07:44.767805507Z",
+    "votingEndTime": "2024-12-16T15:07:44.767805507Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "This proposal will execute a protocol upgrade to the version 5.0.0 (https://github.com/xrplevm/node/releases/tag/v5.0.0)",
+    "votes": []
+  },
+  "#48": {
+    "number": "48",
+    "title": "Remove unbonded validators from the authority",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2024-12-23T16:12:15.441173900Z",
+    "depositEndTime": "2024-12-25T16:12:15.441173900Z",
+    "votingStartTime": "2024-12-23T16:12:15.441173900Z",
+    "votingEndTime": "2024-12-30T16:12:15.441173900Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
+    "votes": []
+  },
+  "#49": {
+    "number": "49",
+    "title": "Replace the 0x0 Address with 0x805 in active_precompiles",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2024-12-30T09:11:09.219483970Z",
+    "depositEndTime": "2025-01-01T09:11:09.219483970Z",
+    "votingStartTime": "2024-12-30T09:11:09.219483970Z",
+    "votingEndTime": "2024-12-31T09:11:09.219483970Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "A bug in active_precompiles is causing failures in both the precompiles and the x/evm module due to incorrect parameter initialization. This proposal addresses the issue by substituting the 0x0 address with 0x805, ensuring stable and proper functionality for the precompiles and the x/evm module.",
+    "votes": []
   }
 }
