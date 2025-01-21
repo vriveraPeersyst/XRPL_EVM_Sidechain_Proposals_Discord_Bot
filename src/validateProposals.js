@@ -1,11 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
-const cosmosGovApi = require('./utils/cosmosGovApi');
 const { notifyNewVotes } = require('./handlers/notifyNewVotes');
 const { notifyNewStatus } = require('./handlers/notifyNewStatus');
-
-const knownProposalsFile = path.resolve(__dirname, '../knownProposals.json');
+const { notifyNewProposal } = require('./handlers/notifyNewProposal');
 
 function normalizeVote(vote) {
   return {
@@ -20,81 +18,51 @@ function areVotesEqual(vote1, vote2) {
   return normVote1.name === normVote2.name && normVote1.vote === normVote2.vote;
 }
 
-async function validateProposals(client, knownProposals) {
-  const fieldsToCheck = [
-    'number',
-    'title',
-    'state',
-    'submitTime',
-    'depositEndTime',
-    'votingStartTime',
-    'votingEndTime',
-    'proposer',
-    'message',
-  ];
+async function validateProposals(client, knownProposals, scrapedProposals) {
+  for (const proposalKey in scrapedProposals) {
+    const scrapedData = scrapedProposals[proposalKey];
+    const knownData = knownProposals[proposalKey] || {};
 
-  for (const proposalKey in knownProposals) {
-    const proposalData = knownProposals[proposalKey];
+    let isNewProposal = !knownProposals[proposalKey];
+    let hasChanges = false;
 
-    if (proposalData.state === 'PROPOSAL_STATUS_PASSED' || proposalData.state === 'PROPOSAL_STATUS_REJECTED' || proposalData.state === 'Passed' || proposalData.state === 'Rejected') {
-      continue;
+    // Detect new proposals
+    if (isNewProposal) {
+      console.log(`New proposal detected: ${proposalKey}`);
+      await notifyNewProposal(client, scrapedData); // Notify about the new proposal
+      hasChanges = true;
     }
 
-    let needsUpdate = false;
+    // Detect state changes
+    if (scrapedData.state !== knownData.state) {
 
-    for (const field of fieldsToCheck) {
-      if (proposalData[field] === 'Not Found') {
-        needsUpdate = true;
-        console.log(
-          `Field "${field}" in proposal ${proposalKey} is marked as "Not Found".`
-        );
-        break;
+      function formatUTCDate(date) {
+        const d = new Date(date);
+        return d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
       }
+      const newVotingEndTime = formatUTCDate(scrapedData.votingEndTime);
+      
+      console.log(`State change detected for Proposal ${proposalKey}: ${knownData.state} -> ${scrapedData.state}`);
+      notifyNewStatus(client, proposalKey, knownData.state, scrapedData.state, newVotingEndTime);
+      hasChanges = true;
     }
 
-    const updatedProposalData = await cosmosGovApi.scrapeProposalData(proposalKey.replace(
-      '#',
-      ''
-    ));
-    if (!updatedProposalData) {
-      console.log(`Could not scrape data for proposal ${proposalKey}`);
-      continue;
-    }
-
-    const oldState = proposalData.state;
-    const newState = updatedProposalData.state;
-    if (oldState !== newState) {
-      console.log(
-        `State change detected for proposal ${proposalKey}: ${oldState} -> ${newState}`
-      );
-      notifyNewStatus(client, proposalKey, oldState, newState);
-      proposalData.state = newState;
-      needsUpdate = true;
-    }
-
-    const currentVotes = proposalData.votes.map(normalizeVote);
-    const scrapedVotes = (updatedProposalData.votes || []).map(normalizeVote);
-    const newVotes = scrapedVotes.filter(
-      (vote) => !currentVotes.some((existingVote) => areVotesEqual(existingVote, vote))
+    // Detect new votes
+    const newVotes = scrapedData.votes.filter(vote =>
+      !(knownData.votes || []).some(existingVote => areVotesEqual(existingVote, vote))
     );
-
     if (newVotes.length > 0) {
-      needsUpdate = true;
-      console.log(`New votes detected for proposal ${proposalKey}:`, newVotes);
-      proposalData.votes = updatedProposalData.votes; // Update to full vote list
-      notifyNewVotes(client, proposalKey, newVotes, currentVotes);
+      console.log(`New votes detected for Proposal ${proposalKey}:`, newVotes);
+      notifyNewVotes(client, proposalKey, newVotes, knownData.votes || []);
+      hasChanges = true;
     }
 
-    if (needsUpdate) {
-      for (const field of fieldsToCheck) {
-        proposalData[field] = updatedProposalData[field];
-      }
-      knownProposals[proposalKey] = proposalData;
+    // Update the known proposals if changes were detected
+    if (hasChanges) {
+      console.log(`Updating Proposal ${proposalKey} in knownProposals.`);
+      knownProposals[proposalKey] = { ...knownData, ...scrapedData };
     }
   }
-
-  fs.writeFileSync(knownProposalsFile, JSON.stringify(knownProposals, null, 2));
-  console.log('Known proposals updated and saved to file.');
 }
 
 module.exports = validateProposals;
