@@ -1,0 +1,78 @@
+To update the votes object to include the moniker as name and the address as address, you'll need to query the validator list and match the name field with the validator's moniker. Here's how you can implement this functionality:
+
+Updated Votes Mapping
+Fetch the validator list from the COSMOS_VALIDATORS_API_URL.
+Map the vote name (which contains the validator's address) to the moniker from the validator list.
+Update the votes object to include the address and moniker.
+Below is the updated code for the scrapeVotes function:
+
+javascript
+Copy
+Edit
+const axios = require('axios');
+
+async function scrapeVotes(proposalId) {
+  try {
+    const validatorsResponse = await axios.get(process.env.COSMOS_VALIDATORS_API_URL);
+    const validators = validatorsResponse.data.validators;
+
+    const response = await axios.get(`${process.env.COSMOS_GOV_API_URL}${proposalId}/votes`);
+    console.log(`Fetched votes for Proposal #${proposalId}:`, response.data.votes);
+
+    return response.data.votes.map(vote => {
+      const validator = validators.find(
+        validator => validator.operator_address === vote.voter
+      );
+
+      return {
+        name: validator ? validator.description.moniker : "Unknown Validator",
+        address: vote.voter,
+        vote: vote.options.map(option => option.option.replace('VOTE_OPTION_', '').toLowerCase()),
+      };
+    });
+  } catch (error) {
+    console.error(`Error fetching votes for Proposal #${proposalId}:`, error.message);
+    return [];
+  }
+}
+Explanation of Changes
+Fetch Validator List:
+
+Added a call to the COSMOS_VALIDATORS_API_URL to fetch the validator list, which includes their moniker and operator_address.
+Map Validator Address to Moniker:
+
+For each vote, the voter field (address) is matched against the operator_address in the validator list to find the corresponding moniker.
+Update Vote Object:
+
+Each vote now includes:
+name: The validator's moniker or "Unknown Validator" if not found.
+address: The original voter address.
+vote: The voting options.
+Example Output
+Input:
+
+json
+Copy
+Edit
+[
+  {
+    "voter": "ethm1lqyg52rzsalnkmsv58yxpzs4juxy6lswkvkyxe",
+    "options": [{ "option": "VOTE_OPTION_YES" }]
+  }
+]
+Output:
+
+json
+Copy
+Edit
+[
+  {
+    "name": "xrp.cafe",
+    "address": "ethm1lqyg52rzsalnkmsv58yxpzs4juxy6lswkvkyxe",
+    "vote": ["yes"]
+  }
+]
+Additional Steps
+Ensure COSMOS_VALIDATORS_API_URL is correctly configured in your .env file.
+Test the functionality to handle cases where a voter address does not match any validator.
+Let me know if you need further assistance!

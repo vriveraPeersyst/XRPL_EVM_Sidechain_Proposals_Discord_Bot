@@ -13,6 +13,7 @@ find . -type f \
     ! -name '*.csv' \
     ! -path '*/.git/*' \
     ! -path '*/node_modules/*' \
+    ! -path '*.lock' \
     -print0 | while IFS= read -r -d '' file; do
     echo "--- File: $file ---" >> "$output_file"
     cat "$file" >> "$output_file"
