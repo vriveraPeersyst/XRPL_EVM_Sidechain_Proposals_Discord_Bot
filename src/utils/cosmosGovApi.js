@@ -70,10 +70,11 @@ async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
           `Proposal #${proposalId}: Voting ends at ${votingEndTime.toISOString()}, Current time: ${now.toISOString()}`
         );
 
-        // Skip proposals that have already ended
-        if (votingEndTime <= now) {
+        // Check if proposal has ended and more than 2 hours have passed
+        const twoHoursAfterEnd = new Date(votingEndTime.getTime() + 2 * 60 * 60 * 1000);
+        if (votingEndTime <= now && now >= twoHoursAfterEnd) {
           console.log(
-            `Skipping Proposal #${proposalId}: Voting ended on ${votingEndTime.toISOString()}.`
+            `Skipping Proposal #${proposalId}: Voting ended on ${votingEndTime.toISOString()} and more than 2 hours have passed.`
           );
           proposalId++;
           continue; // Move to the next proposal
@@ -85,7 +86,7 @@ async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
       console.warn(`Proposal #${proposalId} not found in knownProposals.`);
     }
 
-    // Scrape new proposal data if it hasn't ended
+    // Scrape new proposal data if it hasn't ended or it's within the 2-hour window
     console.log(`Scraping new data for Proposal #${proposalId}...`);
     const proposalData = await scrapeProposalData(proposalId);
 
