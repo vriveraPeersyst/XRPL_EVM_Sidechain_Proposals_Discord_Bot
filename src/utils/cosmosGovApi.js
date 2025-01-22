@@ -76,7 +76,7 @@ async function scrapeVotes(proposalId) {
       const moniker = await getMonikerForDelegatorAddress(delegatorAddr, validators);
 
       mappedVotes.push({
-        name: moniker || 'Unknown Validator',
+        name: moniker || delegatorAddr,
         address: delegatorAddr,
         vote: vote.options.map((option) =>
           option.option.replace('VOTE_OPTION_', '').toLowerCase()
