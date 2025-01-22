@@ -1,701 +1,114 @@
 {
-  "#1": {
-    "number": "1",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-07-04T06:50:41.167695151Z",
-    "depositEndTime": "2023-07-06T06:50:41.167695151Z",
-    "votingStartTime": "2023-07-04T06:53:10.464114451Z",
-    "votingEndTime": "2023-07-06T06:53:10.464114451Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#2": {
-    "number": "2",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-09T18:31:39.344765126Z",
-    "depositEndTime": "2023-10-11T18:31:39.344765126Z",
-    "votingStartTime": "2023-10-09T18:31:39.344765126Z",
-    "votingEndTime": "2023-10-11T18:31:39.344765126Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#3": {
-    "number": "3",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-12T08:56:08.542755370Z",
-    "depositEndTime": "2023-10-14T08:56:08.542755370Z",
-    "votingStartTime": "2023-10-12T08:56:08.542755370Z",
-    "votingEndTime": "2023-10-14T08:56:08.542755370Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#4": {
-    "number": "4",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-12T09:02:45.221112694Z",
-    "depositEndTime": "2023-10-14T09:02:45.221112694Z",
-    "votingStartTime": "2023-10-12T09:02:45.221112694Z",
-    "votingEndTime": "2023-10-14T09:02:45.221112694Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#5": {
-    "number": "5",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-12T10:08:54.908165384Z",
-    "depositEndTime": "2023-10-14T10:08:54.908165384Z",
-    "votingStartTime": "2023-10-12T10:08:54.908165384Z",
-    "votingEndTime": "2023-10-14T10:08:54.908165384Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#6": {
-    "number": "6",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-12T10:18:44.154286634Z",
-    "depositEndTime": "2023-10-14T10:18:44.154286634Z",
-    "votingStartTime": "2023-10-12T10:18:44.154286634Z",
-    "votingEndTime": "2023-10-14T10:18:44.154286634Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#7": {
-    "number": "7",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-10-27T14:22:45.355355024Z",
-    "depositEndTime": "2023-10-29T14:22:45.355355024Z",
-    "votingStartTime": "2023-10-27T14:22:45.355355024Z",
-    "votingEndTime": "2023-10-29T14:22:45.355355024Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#8": {
-    "number": "8",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-11-20T16:36:32.815765954Z",
-    "depositEndTime": "2023-11-22T16:36:32.815765954Z",
-    "votingStartTime": "2023-11-20T16:37:47.578627711Z",
-    "votingEndTime": "2023-11-22T16:37:47.578627711Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#9": {
-    "number": "9",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-12-06T10:51:19.669980462Z",
-    "depositEndTime": "2023-12-08T10:51:19.669980462Z",
-    "votingStartTime": "2023-12-06T10:51:19.669980462Z",
-    "votingEndTime": "2023-12-08T10:51:19.669980462Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#10": {
-    "number": "10",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-12-12T10:30:36.180107579Z",
-    "depositEndTime": "2023-12-14T10:30:36.180107579Z",
-    "votingStartTime": "2023-12-12T10:30:36.180107579Z",
-    "votingEndTime": "2023-12-14T10:30:36.180107579Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#11": {
-    "number": "11",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2023-12-18T14:51:00.936669720Z",
-    "depositEndTime": "2023-12-20T14:51:00.936669720Z",
-    "votingStartTime": "2023-12-18T14:51:00.936669720Z",
-    "votingEndTime": "2023-12-20T14:51:00.936669720Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#12": {
-    "number": "12",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-01-25T17:18:00.369983378Z",
-    "depositEndTime": "2024-01-27T17:18:00.369983378Z",
-    "votingStartTime": "2024-01-25T17:18:25.169069538Z",
-    "votingEndTime": "2024-01-27T17:18:25.169069538Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#13": {
-    "number": "13",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-01-29T08:24:52.024016058Z",
-    "depositEndTime": "2024-01-31T08:24:52.024016058Z",
-    "votingStartTime": "2024-01-29T08:24:52.024016058Z",
-    "votingEndTime": "2024-01-31T08:24:52.024016058Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#14": {
-    "number": "14",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-02-05T11:59:34.646472237Z",
-    "depositEndTime": "2024-02-07T11:59:34.646472237Z",
-    "votingStartTime": "2024-02-05T11:59:34.646472237Z",
-    "votingEndTime": "2024-02-07T11:59:34.646472237Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#15": {
-    "number": "15",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-02-09T07:34:26.437848795Z",
-    "depositEndTime": "2024-02-11T07:34:26.437848795Z",
-    "votingStartTime": "2024-02-09T07:34:26.437848795Z",
-    "votingEndTime": "2024-02-11T07:34:26.437848795Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#16": {
-    "number": "16",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:52:59.262288517Z",
-    "depositEndTime": "2024-03-15T17:52:59.262288517Z",
-    "votingStartTime": "2024-03-13T17:52:59.262288517Z",
-    "votingEndTime": "2024-03-15T17:52:59.262288517Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#17": {
-    "number": "17",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:54:42.341465520Z",
-    "depositEndTime": "2024-03-15T17:54:42.341465520Z",
-    "votingStartTime": "2024-03-13T17:54:42.341465520Z",
-    "votingEndTime": "2024-03-15T17:54:42.341465520Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#18": {
-    "number": "18",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:55:00.893667654Z",
-    "depositEndTime": "2024-03-15T17:55:00.893667654Z",
-    "votingStartTime": "2024-03-13T17:55:00.893667654Z",
-    "votingEndTime": "2024-03-15T17:55:00.893667654Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#19": {
-    "number": "19",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:55:15.620598448Z",
-    "depositEndTime": "2024-03-15T17:55:15.620598448Z",
-    "votingStartTime": "2024-03-13T17:55:15.620598448Z",
-    "votingEndTime": "2024-03-15T17:55:15.620598448Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#20": {
-    "number": "20",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:55:30.391662666Z",
-    "depositEndTime": "2024-03-15T17:55:30.391662666Z",
-    "votingStartTime": "2024-03-13T17:55:30.391662666Z",
-    "votingEndTime": "2024-03-15T17:55:30.391662666Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#21": {
-    "number": "21",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:55:41.336738432Z",
-    "depositEndTime": "2024-03-15T17:55:41.336738432Z",
-    "votingStartTime": "2024-03-13T17:55:41.336738432Z",
-    "votingEndTime": "2024-03-15T17:55:41.336738432Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#22": {
-    "number": "22",
-    "title": "",
-    "state": "PROPOSAL_STATUS_REJECTED",
-    "submitTime": "2024-03-13T17:55:52.321031569Z",
-    "depositEndTime": "2024-03-15T17:55:52.321031569Z",
-    "votingStartTime": "2024-03-13T17:55:52.321031569Z",
-    "votingEndTime": "2024-03-15T17:55:52.321031569Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#23": {
-    "number": "23",
-    "title": "",
-    "state": "PROPOSAL_STATUS_REJECTED",
-    "submitTime": "2024-03-13T17:56:03.232749605Z",
-    "depositEndTime": "2024-03-15T17:56:03.232749605Z",
-    "votingStartTime": "2024-03-13T17:56:03.232749605Z",
-    "votingEndTime": "2024-03-15T17:56:03.232749605Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#24": {
-    "number": "24",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:56:14.065955125Z",
-    "depositEndTime": "2024-03-15T17:56:14.065955125Z",
-    "votingStartTime": "2024-03-13T17:56:14.065955125Z",
-    "votingEndTime": "2024-03-15T17:56:14.065955125Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#25": {
-    "number": "25",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:56:25.019507810Z",
-    "depositEndTime": "2024-03-15T17:56:25.019507810Z",
-    "votingStartTime": "2024-03-13T17:56:25.019507810Z",
-    "votingEndTime": "2024-03-15T17:56:25.019507810Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#26": {
-    "number": "26",
-    "title": "",
-    "state": "PROPOSAL_STATUS_REJECTED",
-    "submitTime": "2024-03-13T17:56:36.140105318Z",
-    "depositEndTime": "2024-03-15T17:56:36.140105318Z",
-    "votingStartTime": "2024-03-13T17:56:36.140105318Z",
-    "votingEndTime": "2024-03-15T17:56:36.140105318Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#27": {
-    "number": "27",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:56:47.102741463Z",
-    "depositEndTime": "2024-03-15T17:56:47.102741463Z",
-    "votingStartTime": "2024-03-13T17:56:47.102741463Z",
-    "votingEndTime": "2024-03-15T17:56:47.102741463Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#28": {
-    "number": "28",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T17:57:09.253407942Z",
-    "depositEndTime": "2024-03-15T17:57:09.253407942Z",
-    "votingStartTime": "2024-03-13T17:57:09.253407942Z",
-    "votingEndTime": "2024-03-15T17:57:09.253407942Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#29": {
-    "number": "29",
-    "title": "",
-    "state": "PROPOSAL_STATUS_REJECTED",
-    "submitTime": "2024-03-13T17:57:34.875719617Z",
-    "depositEndTime": "2024-03-15T17:57:34.875719617Z",
-    "votingStartTime": "2024-03-13T17:57:34.875719617Z",
-    "votingEndTime": "2024-03-15T17:57:34.875719617Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#30": {
-    "number": "30",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-03-13T18:16:18.860069533Z",
-    "depositEndTime": "2024-03-15T18:16:18.860069533Z",
-    "votingStartTime": "2024-03-13T18:16:18.860069533Z",
-    "votingEndTime": "2024-03-15T18:16:18.860069533Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#31": {
-    "number": "31",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-04-10T14:01:09.459980612Z",
-    "depositEndTime": "2024-04-12T14:01:09.459980612Z",
-    "votingStartTime": "2024-04-10T14:01:09.459980612Z",
-    "votingEndTime": "2024-04-12T14:01:09.459980612Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#32": {
-    "number": "32",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-04-10T15:45:16.909504929Z",
-    "depositEndTime": "2024-04-12T15:45:16.909504929Z",
-    "votingStartTime": "2024-04-10T15:45:53.730779560Z",
-    "votingEndTime": "2024-04-12T15:45:53.730779560Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#33": {
-    "number": "33",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-05-01T10:03:25.730748965Z",
-    "depositEndTime": "2024-05-03T10:03:25.730748965Z",
-    "votingStartTime": "2024-05-01T10:03:25.730748965Z",
-    "votingEndTime": "2024-05-08T10:03:25.730748965Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#34": {
-    "number": "34",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-05-01T10:05:52.171700544Z",
-    "depositEndTime": "2024-05-03T10:05:52.171700544Z",
-    "votingStartTime": "2024-05-01T10:06:51.201140685Z",
-    "votingEndTime": "2024-05-08T10:06:51.201140685Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#35": {
-    "number": "35",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-05-09T15:15:15.155721215Z",
-    "depositEndTime": "2024-05-11T15:15:15.155721215Z",
-    "votingStartTime": "2024-05-09T15:15:15.155721215Z",
-    "votingEndTime": "2024-05-16T15:15:15.155721215Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#36": {
-    "number": "36",
-    "title": "",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-05-28T10:22:13.452152403Z",
-    "depositEndTime": "2024-05-30T10:22:13.452152403Z",
-    "votingStartTime": "2024-05-28T10:22:13.452152403Z",
-    "votingEndTime": "2024-06-04T10:22:13.452152403Z",
-    "proposer": "",
-    "message": "",
-    "votes": []
-  },
-  "#37": {
-    "number": "37",
-    "title": "Add Flowdesk validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-07-23T15:46:06.148668898Z",
-    "depositEndTime": "2024-07-25T15:46:06.148668898Z",
-    "votingStartTime": "2024-07-23T15:46:06.148668898Z",
-    "votingEndTime": "2024-07-30T15:46:06.148668898Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "Add Flowdesk as a new validator in the Authority",
-    "votes": []
-  },
-  "#38": {
-    "number": "38",
-    "title": "Add superhow validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-07-23T15:48:18.851398192Z",
-    "depositEndTime": "2024-07-25T15:48:18.851398192Z",
-    "votingStartTime": "2024-07-23T15:48:18.851398192Z",
-    "votingEndTime": "2024-07-30T15:48:18.851398192Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "Add superhow as a new validator in the Authority",
-    "votes": []
-  },
-  "#39": {
-    "number": "39",
-    "title": "Add Yellow GSR validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-07-23T15:50:19.586793677Z",
-    "depositEndTime": "2024-07-25T15:50:19.586793677Z",
-    "votingStartTime": "2024-07-23T15:50:19.586793677Z",
-    "votingEndTime": "2024-07-30T15:50:19.586793677Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "Add Yellow GSR as a new validator in the Authority",
-    "votes": []
-  },
-  "#40": {
-    "number": "40",
-    "title": "Add Palmera DAO validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-07-23T15:51:51.132596221Z",
-    "depositEndTime": "2024-07-25T15:51:51.132596221Z",
-    "votingStartTime": "2024-07-23T15:51:51.132596221Z",
-    "votingEndTime": "2024-07-30T15:51:51.132596221Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "Add Palmera DAO as a new validator in the Authority",
-    "votes": []
-  },
-  "#41": {
-    "number": "41",
-    "title": "Add Kintsugi validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-07-23T15:53:33.639863003Z",
-    "depositEndTime": "2024-07-25T15:53:33.639863003Z",
-    "votingStartTime": "2024-07-23T15:53:33.639863003Z",
-    "votingEndTime": "2024-07-30T15:53:33.639863003Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "Add Kintsugi as a new validator in the Authority",
-    "votes": []
-  },
-  "#42": {
-    "number": "42",
-    "title": "Protocol upgrade to v3.0.0",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-08-27T15:29:17.804294088Z",
-    "depositEndTime": "2024-08-29T15:29:17.804294088Z",
-    "votingStartTime": "2024-08-27T15:29:17.804294088Z",
-    "votingEndTime": "2024-09-03T15:29:17.804294088Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "This proposal will execute a protocol upgrade to the version 3.0.0 (https://github.com/xrplevm/node/releases/tag/v3.0.0)",
-    "votes": []
-  },
-  "#43": {
-    "number": "43",
-    "title": "Protocol upgrade to v4.0.0",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-11-18T17:10:18.665049169Z",
-    "depositEndTime": "2024-11-20T17:10:18.665049169Z",
-    "votingStartTime": "2024-11-18T17:10:18.665049169Z",
-    "votingEndTime": "2024-11-25T17:10:18.665049169Z",
-    "proposer": "ethm1weul2n2ch4w5ejx86h2p9qfn2aeurwa5mkhf7h",
-    "message": "This proposal will execute a protocol upgrade to the version 4.0.0 (https://github.com/xrplevm/node/releases/tag/v4.0.0)",
-    "votes": []
-  },
-  "#44": {
-    "number": "44",
-    "title": "Remove unbonded validators from the authority",
-    "state": "PROPOSAL_STATUS_FAILED",
-    "submitTime": "2024-11-27T15:22:55.040816760Z",
-    "depositEndTime": "2024-11-29T15:22:55.040816760Z",
-    "votingStartTime": "2024-11-27T15:22:55.040816760Z",
-    "votingEndTime": "2024-12-04T15:22:55.040816760Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
-    "votes": []
-  },
-  "#45": {
-    "number": "45",
-    "title": "Add Grove validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-11-27T15:28:03.820537994Z",
-    "depositEndTime": "2024-11-29T15:28:03.820537994Z",
-    "votingStartTime": "2024-11-27T15:28:03.820537994Z",
-    "votingEndTime": "2024-12-04T15:28:03.820537994Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "This proposal adds Grove as a new validator to the network.",
-    "votes": []
-  },
-  "#46": {
-    "number": "46",
-    "title": "Add Latam Nodes validator",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-11-27T15:31:12.086890800Z",
-    "depositEndTime": "2024-11-29T15:31:12.086890800Z",
-    "votingStartTime": "2024-11-27T15:31:12.086890800Z",
-    "votingEndTime": "2024-12-04T15:31:12.086890800Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "This proposal adds Latam Nodes as a new validator to the network. At LatamNodes, we believe in the power of decentralization and the strength of the Latin American community. By offering validator services based right here in Latin America, we’re helping to ensure a more secure and diverse network infrastructure. Our mission is to empower local communities, boost blockchain adoption, and contribute to the region’s growth within the global crypto ecosystem.",
-    "votes": []
-  },
-  "#47": {
-    "number": "47",
-    "title": "Protocol upgrade to v5.0.0",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-12-09T15:07:44.767805507Z",
-    "depositEndTime": "2024-12-11T15:07:44.767805507Z",
-    "votingStartTime": "2024-12-09T15:07:44.767805507Z",
-    "votingEndTime": "2024-12-16T15:07:44.767805507Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "This proposal will execute a protocol upgrade to the version 5.0.0 (https://github.com/xrplevm/node/releases/tag/v5.0.0)",
-    "votes": []
-  },
-  "#48": {
-    "number": "48",
-    "title": "Remove unbonded validators from the authority",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-12-23T16:12:15.441173900Z",
-    "depositEndTime": "2024-12-25T16:12:15.441173900Z",
-    "votingStartTime": "2024-12-23T16:12:15.441173900Z",
-    "votingEndTime": "2024-12-30T16:12:15.441173900Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
-    "votes": []
-  },
-  "#49": {
-    "number": "49",
-    "title": "Replace the 0x0 Address with 0x805 in active_precompiles",
-    "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2024-12-30T09:11:09.219483970Z",
-    "depositEndTime": "2025-01-01T09:11:09.219483970Z",
-    "votingStartTime": "2024-12-30T09:11:09.219483970Z",
-    "votingEndTime": "2024-12-31T09:11:09.219483970Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "A bug in active_precompiles is causing failures in both the precompiles and the x/evm module due to incorrect parameter initialization. This proposal addresses the issue by substituting the 0x0 address with 0x805, ensuring stable and proper functionality for the precompiles and the x/evm module.",
-    "votes": []
-  },
-  "#50": {
+  "50": {
     "number": "50",
     "title": "Protocol upgrade to v6.0.0",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-01-21T10:13:46.658454004Z",
     "depositEndTime": "2025-01-23T10:13:46.658454004Z",
     "votingStartTime": "2025-01-21T10:17:00.652504953Z",
     "votingEndTime": "2025-01-22T10:17:00.652504953Z",
     "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
     "message": "This proposal will execute a protocol upgrade to the version 6.0.0 (https://github.com/xrplevm/node/releases/tag/v6.0.0)",
+    "votes": []
+  },
+  "51": {
+    "number": "51",
+    "title": "Remove unbonded validators from the authority",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-01-22T15:53:41.640212426Z",
+    "depositEndTime": "2025-01-24T15:53:41.640212426Z",
+    "votingStartTime": "2025-01-22T15:53:41.640212426Z",
+    "votingEndTime": "2025-01-23T15:53:41.640212426Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
     "votes": [
       {
-        "name": "ethm1p8v7k8l06q3enlknatec64zxfz6kh5g4at4uac",
+        "name": "peersyst-node-4",
+        "address": "ethm1p8v7k8l06q3enlknatec64zxfz6kh5g4at4uac",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1yl0x2jt2ny5z024ucxhsa30yd50nj958ywz42v",
+        "name": "capsign",
+        "address": "ethm1x9ek24j04n3lvvg9vceyyqegkddx3ka2rvpkth",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1gzsalqy0rru2pe6az9ulk69hg2dnm22wrw3sl7",
+        "name": "Flowdesk",
+        "address": "ethm1gzsalqy0rru2pe6az9ulk69hg2dnm22wrw3sl7",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1txs7kd2aha9tmyexxlsqhvk6l2jxtxwmxwmyla",
+        "name": "peersyst-node-5",
+        "address": "ethm1vczd5fxcsv5fprkqw3quqpwf6wvkl80hpxvyfx",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1vczd5fxcsv5fprkqw3quqpwf6wvkl80hpxvyfx",
+        "name": "purple-devnet-0",
+        "address": "ethm1dv6n4heyj724rsu6qxax8ggf42c97hsxpdyxuf",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1djhpzrgnrn7x8vhyeaqfpaeg47tqu75ymrwvp9",
+        "name": "Nexus",
+        "address": "ethm1djhpzrgnrn7x8vhyeaqfpaeg47tqu75ymrwvp9",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1dmx40kxp8ea0uncccxh7gl2deyw3cwpj2kldqe",
+        "name": "peersyst-node-3",
+        "address": "ethm1weh6nan3p8cpg7hsfke8teksjnf5pdl8rf0jte",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1weh6nan3p8cpg7hsfke8teksjnf5pdl8rf0jte",
+        "name": "peersyst-node-2",
+        "address": "ethm1weul2n2ch4w5ejx86h2p9qfn2aeurwa5mkhf7h",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1weul2n2ch4w5ejx86h2p9qfn2aeurwa5mkhf7h",
+        "name": "peersyst-node-1",
+        "address": "ethm107ln20psuvdcxc2r0wr7gc0xdqn9xhscdxamg9",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm10yzanvr4m9td526axvdfgwreqwru7pfrt8qckm",
+        "name": "xtoadz",
+        "address": "ethm1nn4lkv7e6tfefv93xlflmk69jlngn6ed7uwxkw",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm107ln20psuvdcxc2r0wr7gc0xdqn9xhscdxamg9",
+        "name": "peersyst-k-node-0",
+        "address": "ethm1e4l3nu7ggajzy2dgrczskea5ref0745g34mdc2",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1sk7pl0v2h3997shy46jsn63utg6n2a82959a8w",
+        "name": "peersyst-node-0",
+        "address": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
         "vote": [
           "yes"
         ]
       },
       {
-        "name": "ethm1nn4lkv7e6tfefv93xlflmk69jlngn6ed7uwxkw",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "ethm1e4l3nu7ggajzy2dgrczskea5ref0745g34mdc2",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "ethm17pf8whm30aazqdn5pxeq0yw4l2hwu7ucylsqkq",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "ethm1lqyg52rzsalnkmsv58yxpzs4juxy6lswkvkyxe",
+        "name": "soru",
+        "address": "ethm17pf8whm30aazqdn5pxeq0yw4l2hwu7ucylsqkq",
         "vote": [
           "yes"
         ]

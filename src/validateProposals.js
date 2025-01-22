@@ -30,7 +30,8 @@ async function validateProposals(client, knownProposals, scrapedProposals) {
     if (isNewProposal) {
       console.log(`New proposal detected: ${proposalKey}`);
       await notifyNewProposal(client, scrapedData); // Notify about the new proposal
-      hasChanges = true;
+      knownProposals[proposalKey] = scrapedData; // Store it so we know it's no longer new
+      continue;
     }
 
     // Detect state changes

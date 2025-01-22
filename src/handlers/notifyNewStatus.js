@@ -38,9 +38,9 @@ async function notifyNewStatus(client, proposalKey, oldStatus, newStatus, newVot
     return;
   }
 
-  const threadInfo = threadMap[proposalKey.replace('#', '')];
+  const threadInfo = threadMap[proposalKey];
   if (!threadInfo) {
-    console.error(`No thread info found for Proposal #${proposalKey}`);
+    console.error(`No thread info found for Proposal ${proposalKey}`);
     return;
   }
 
@@ -48,7 +48,7 @@ async function notifyNewStatus(client, proposalKey, oldStatus, newStatus, newVot
   const thread = channel.threads.cache.get(threadId);
 
   if (!thread) {
-    console.error(`Thread not found for Proposal #${proposalKey}`);
+    console.error(`Thread not found for Proposal ${proposalKey}`);
     return;
   }
 
@@ -56,13 +56,13 @@ async function notifyNewStatus(client, proposalKey, oldStatus, newStatus, newVot
   const introMessage = await channel.messages.fetch(messageId);
 
   if (!introMessage) {
-    console.error(`Intro message not found for Proposal #${proposalKey}`);
+    console.error(`Intro message not found for Proposal ${proposalKey}`);
     return;
   }
 
   const embed = introMessage.embeds[0];
   if (!embed) {
-    console.error(`No embed found in the intro message for Proposal #${proposalKey}`);
+    console.error(`No embed found in the intro message for Proposal ${proposalKey}`);
     return;
   }
 
@@ -84,7 +84,7 @@ async function notifyNewStatus(client, proposalKey, oldStatus, newStatus, newVot
 
   // Edit the intro message
   await introMessage.edit({ embeds: [updatedIntroEmbed] });
-  console.log(`Edited intro message for Proposal #${proposalKey} with new status.`);
+  console.log(`Edited intro message for Proposal ${proposalKey} with new status.`);
 
   // Step 2: Send a new message to the thread with the status update
   const statusMap = {
@@ -115,7 +115,7 @@ async function notifyNewStatus(client, proposalKey, oldStatus, newStatus, newVot
   }
 
   await thread.send({ embeds: [threadEmbed] });
-  console.log(`Sent status update message to thread for Proposal #${proposalKey}.`);
+  console.log(`Sent status update message to thread for Proposal ${proposalKey}.`);
 }
 
 module.exports = {

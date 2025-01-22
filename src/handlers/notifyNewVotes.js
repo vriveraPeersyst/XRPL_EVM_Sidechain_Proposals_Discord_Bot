@@ -21,7 +21,7 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
     return;
   }
 
-  const threadId = threadMap[proposalKey.replace('#', '')]?.threadId;
+  const threadId = threadMap[proposalKey]?.threadId;
   if (!threadId) {
     console.error(`Thread ID not found in threadMap for Proposal ${proposalKey}`);
     return;
