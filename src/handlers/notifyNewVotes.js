@@ -5,6 +5,8 @@ const path = require('path');
 const threadMapFile = path.resolve(__dirname, '../../threadMap.json');
 let threadMap = {};
 
+console.log(threadMap);
+
 // Load thread IDs from file
 if (fs.existsSync(threadMapFile)) {
   threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
@@ -19,10 +21,11 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
     return;
   }
 
-  const threadId = threadMap[proposalKey.replace(
-    '#',
-    ''
-  )];
+  const threadId = threadMap[proposalKey.replace('#', '')]?.threadId;
+  if (!threadId) {
+    console.error(`Thread ID not found in threadMap for Proposal ${proposalKey}`);
+    return;
+  }
   const thread = channel.threads.cache.get(threadId);
 
   if (!thread) {
