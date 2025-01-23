@@ -1,1 +1,14 @@
-{}
+{
+  "51": {
+    "number": "51",
+    "title": "Remove unbonded validators from the authority",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-22T15:53:41.640212426Z",
+    "depositEndTime": "2025-01-24T15:53:41.640212426Z",
+    "votingStartTime": "2025-01-22T15:53:41.640212426Z",
+    "votingEndTime": "2025-01-23T15:53:41.640212426Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
+    "votes": []
+  }
+}

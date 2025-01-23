@@ -54,7 +54,7 @@ client.once('ready', async () => {
     }
   }
 
-  cron.schedule('* * * * *', () => {
+  cron.schedule('*/5 * * * *', () => {
     console.log('Cron job triggered at', new Date().toLocaleString());
     executeTasks();
   });

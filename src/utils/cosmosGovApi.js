@@ -134,7 +134,7 @@ async function scrapeProposalData(proposalId) {
  * until one is missing, then stops. Adjust logic as needed for your use.
  */
 async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
-  let proposalId = 50; // or whichever starting ID you want
+  let proposalId = 51; // or whichever starting ID you want
   let missingProposals = 0;
 
   while (missingProposals < 1) {
@@ -145,13 +145,18 @@ async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
       if (knownProposal.votingEndTime) {
         const votingEndTime = new Date(knownProposal.votingEndTime);
         const now = new Date();
+        // Voting end time plus 3 hours
+        const votingEndTimePlus3 = new Date(votingEndTime.getTime() + 3 * 60 * 60 * 1000);
+
         console.log(
-          `Proposal ${proposalId}: Voting ends at ${votingEndTime.toISOString()}, Current time: ${now.toISOString()}`
+          `Proposal ${proposalId}: Voting ended at ${votingEndTime.toISOString()}, keep scraping until ${votingEndTimePlus3.toISOString()}, current time: ${now.toISOString()}`
         );
 
-        // Skip proposals that have ended
-        if (votingEndTime <= now) {
-          console.log(`Skipping Proposal ${proposalId}: Voting ended on ${votingEndTime.toISOString()}.`);
+        // Skip proposals that ended more than 3 hours ago
+        if (now > votingEndTimePlus3) {
+          console.log(
+            `Skipping Proposal ${proposalId}: Voting ended on ${votingEndTime.toISOString()} (more than 3 hours ago).`
+          );
           proposalId++;
           continue;
         }
@@ -180,6 +185,7 @@ async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
 
   console.log('Finished scraping proposals.');
 }
+
 
 module.exports = {
   scrapeProposalData,
