@@ -5,6 +5,9 @@ const path = require('path');
 const threadMapFile = path.resolve(__dirname, '../../threadMap.json');
 let threadMap = {};
 
+console.log("Using threadMapFile =", threadMapFile);
+console.log("threadMap loaded from file =", threadMap);
+
 console.log(threadMap);
 
 // Load thread IDs from file
@@ -22,6 +25,7 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
   }
 
   const threadId = threadMap[proposalKey]?.threadId;
+  console.log(threadId);
   if (!threadId) {
     console.error(`Thread ID not found in threadMap for Proposal ${proposalKey}`);
     return;
