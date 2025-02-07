@@ -10,5 +10,165 @@
     "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
     "message": "There are currently some inactive validators that are not participating in the network consensus. This proposal removes them to improve the network security and governance.",
     "votes": []
+  },
+  "52": {
+    "number": "52",
+    "title": "Add Polkachu validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:54:08.427943401Z",
+    "depositEndTime": "2025-01-25T17:54:08.427943401Z",
+    "votingStartTime": "2025-01-23T17:54:08.427943401Z",
+    "votingEndTime": "2025-01-24T17:54:08.427943401Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "Polkachu is founded by a group of technology professionals who focus on providing the highest quality infrastructure and services for public blockchain networks. Today. Polkachu supports 112 blockchain networks as validator / node operator. $485M crypto assets are staked with Polkachu on blockchains such as Aptos, Celestia, CosmosHub, dYdX, Injective, NEAR, and Solana. We look forward to working with the XRP community!",
+    "votes": []
+  },
+  "53": {
+    "number": "53",
+    "title": "Add Enigma validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:54:49.508853611Z",
+    "depositEndTime": "2025-01-25T17:54:49.508853611Z",
+    "votingStartTime": "2025-01-23T17:54:49.508853611Z",
+    "votingEndTime": "2025-01-24T17:54:49.508853611Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "We are Enigma, a professional infrastructure provider supporting over 50 blockchain networks and offering a wide range of services, including public infrastructure, indexing solutions, analytics, and community services.\n\nOur team has been delivering public infrastructure support for XRPL for some time now, providing resources such as public RPC/LCD endpoints , daily updated snapshots and addrbook",
+    "votes": []
+  },
+  "54": {
+    "number": "54",
+    "title": "Add RHINO validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:55:44.717919574Z",
+    "depositEndTime": "2025-01-25T17:55:44.717919574Z",
+    "votingStartTime": "2025-01-23T17:55:44.717919574Z",
+    "votingEndTime": "2025-01-24T17:55:44.717919574Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "Hey everyone, now that the v5.0.0 upgrade is complete and (I believe) more vals can be added to the set, I wanted to give a little more info about our firm, RHINO :rhino: .\n\nJeff and I have over 30 years in the infrastructure and security space. Today, we secure a bit more than $450M in TVL across more than a dozen networks, including Aptos, Sei, dYdX, and others. We run bare-metal infrastructure out of 2 RHINO-owned data centers in the US, combined with an additional 4 clusters of nodes in Germany, Singapore, Tokyo and soon in the Middle East. Our security policies and ISMS are extensive, providing significant layers of security protocols to protect our operations - public or signing.\n\nIn addition to validation services, we run some of the largest RPC arrays in the space for Foundations including Sei, Aptos, Seda, and Chainlink. We serve just about 30B requests/month to over 200 DeFi, NFT, bridge, social and other teams for those projects.\n\nOur infrastructure and monitoring is built based our experience, and has significant security, resiliency and monitoring to afford any outage - at a hardware, signer, node, provider or region. We run just redundant, geo-distributed nodes for just over 60 chains, including Ethereum, Solana, Avalanche, Arbitrum, Optimism, Polygon, Polygon zkEVM, ZKSync, Scroll, Mode, XLayer and more. We'd very much like to apply our expertise, network and effort to XRPL EVM!",
+    "votes": []
+  },
+  "55": {
+    "number": "55",
+    "title": "Add kingnodes validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:56:18.652298768Z",
+    "depositEndTime": "2025-01-25T17:56:18.652298768Z",
+    "votingStartTime": "2025-01-23T17:56:18.652298768Z",
+    "votingEndTime": "2025-01-30T17:56:18.652298768Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "Our Australian owned and operated company, King Blockchain Pty Ltd operates validators and blockchain infrastructure as “Kingnodes” across the blockchain landscape.\n \nWe are proud to operate our own hardware racked in a tier-4 datacentre located in Brisbane, Australia, as well as a fleet of rented/leased bare metal hardware across the globe.\n \nWe have been in operation since late 2020 and operate validators on 15+ mainnet networks including Injective, Sei, dYdX, among others. We also operate associated blockchain infrastructure and services for a raft of cosmos SDK and EVM compatible blockchains. We provide B2B services such as high quality, distributed RPC systems for enterprise customers such as dYdX, as well as to individual teams. Our robust archive nodes and backup/snapshot solutions has provided blockchain history security to many chains in this time.\n \nWith our years of experience, we have developed resilient and comprehensive monitoring and alerting solutions for our operation and boast response times from the on-call engineer, on average, less than 1 hour.\n \nWe look forward to working with you all, and couldn’t be prouder to be here amongst long time friends, as well as fresh faces.",
+    "votes": []
+  },
+  "56": {
+    "number": "56",
+    "title": "Add Imperator.co validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:56:44.465686697Z",
+    "depositEndTime": "2025-01-25T17:56:44.465686697Z",
+    "votingStartTime": "2025-01-23T17:56:44.465686697Z",
+    "votingEndTime": "2025-01-24T17:56:44.465686697Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "Imperator is a trusted PoS validator and blockchain infrastructure service provider specializing in node operations, RPC endpoints, dedicated nodes, relayers, data APIs, and indexers.\nWith 4 years of experience in end-to-end infrastructure management and scalability support for blockchain foundations, we proudly support 50+ networks with over $400M in TVL.\nOur clients include some of the most respected names in the industry, such as Distributed Global, Flowdesk, Selini Capital, the dYdX Trading Team & Foundation, BitGo, Anchorage, Copper, Axelar, Leap Wallet, and many others.",
+    "votes": []
+  },
+  "57": {
+    "number": "57",
+    "title": "Add Kintsugui and Superhow validators",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-01-23T17:57:20.870135285Z",
+    "depositEndTime": "2025-01-25T17:57:20.870135285Z",
+    "votingStartTime": "2025-01-23T17:57:20.870135285Z",
+    "votingEndTime": "2025-01-30T17:57:20.870135285Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "Kintsugui and Superhow are validators that already where onboarded who lost validator keys. This proposal adds their new nodes to the network.",
+    "votes": []
+  },
+  "58": {
+    "number": "58",
+    "title": "Change the owner of the XRP token",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-02-03T08:25:07.647652193Z",
+    "depositEndTime": "2025-02-05T08:25:07.647652193Z",
+    "votingStartTime": "2025-02-03T08:25:07.647652193Z",
+    "votingEndTime": "2025-02-04T08:25:07.647652193Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "The Axelar TokenManager that issues XRP has changed, and its address and needs to be updated to the new one (0x0Da7B5b74a8E4ddd88F462Bc6A87A7CCcF2969e9). This proposal changes the owner to a new address.",
+    "votes": []
+  },
+  "59": {
+    "number": "59",
+    "title": "Change the owner of the XRP token",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-02-07T10:08:29.307589181Z",
+    "depositEndTime": "2025-02-09T10:08:29.307589181Z",
+    "votingStartTime": "2025-02-07T10:08:29.307589181Z",
+    "votingEndTime": "2025-02-08T10:08:29.307589181Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "The Axelar TokenManager that issues XRP has changed, and its address and needs to be updated to the new one (0x324Be08EF8154963DC9641Eb23239bC981394064). This proposal changes the owner to a new address.",
+    "votes": [
+      {
+        "name": "peersyst-node-4",
+        "address": "ethm1p8v7k8l06q3enlknatec64zxfz6kh5g4at4uac",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-node-5",
+        "address": "ethm1vczd5fxcsv5fprkqw3quqpwf6wvkl80hpxvyfx",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "purple-devnet-0",
+        "address": "ethm1dv6n4heyj724rsu6qxax8ggf42c97hsxpdyxuf",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-node-3",
+        "address": "ethm1weh6nan3p8cpg7hsfke8teksjnf5pdl8rf0jte",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-node-2",
+        "address": "ethm1weul2n2ch4w5ejx86h2p9qfn2aeurwa5mkhf7h",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-node-1",
+        "address": "ethm107ln20psuvdcxc2r0wr7gc0xdqn9xhscdxamg9",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "kingnodes",
+        "address": "ethm130wdnzwdkphlk3vswdauvces0hmp2jr8lucydp",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-node-0",
+        "address": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "bkgeomatics",
+        "address": "ethm1lqyg52rzsalnkmsv58yxpzs4juxy6lswkvkyxe",
+        "vote": [
+          "yes"
+        ]
+      }
+    ]
   }
 }
