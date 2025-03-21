@@ -98,17 +98,36 @@
   "59": {
     "number": "59",
     "title": "Change the owner of the XRP token",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-02-07T10:08:29.307589181Z",
     "depositEndTime": "2025-02-09T10:08:29.307589181Z",
     "votingStartTime": "2025-02-07T10:08:29.307589181Z",
     "votingEndTime": "2025-02-08T10:08:29.307589181Z",
     "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
     "message": "The Axelar TokenManager that issues XRP has changed, and its address and needs to be updated to the new one (0x324Be08EF8154963DC9641Eb23239bC981394064). This proposal changes the owner to a new address.",
+    "votes": []
+  },
+  "60": {
+    "number": "60",
+    "title": "Protocol upgrade to v7.0.0",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-03-20T17:59:27.466133940Z",
+    "depositEndTime": "2025-03-22T17:59:27.466133940Z",
+    "votingStartTime": "2025-03-20T17:59:27.466133940Z",
+    "votingEndTime": "2025-03-21T17:59:27.466133940Z",
+    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
+    "message": "This proposal will execute a protocol upgrade to the version 7.0.0 (https://github.com/xrplevm/node/releases/tag/v7.0.0)",
     "votes": [
       {
         "name": "peersyst-node-4",
         "address": "ethm1p8v7k8l06q3enlknatec64zxfz6kh5g4at4uac",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "SG-1",
+        "address": "ethm1r4lge70caeqkaew66ztlyseaerhn3qnrggv3ar",
         "vote": [
           "yes"
         ]
@@ -123,6 +142,20 @@
       {
         "name": "purple-devnet-0",
         "address": "ethm1dv6n4heyj724rsu6qxax8ggf42c97hsxpdyxuf",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Nexus",
+        "address": "ethm1djhpzrgnrn7x8vhyeaqfpaeg47tqu75ymrwvp9",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Enigma",
+        "address": "ethm1dndsk9h7e8re5nmwtsw9zt2wfrp7048hp7g4pv",
         "vote": [
           "yes"
         ]
@@ -151,6 +184,27 @@
       {
         "name": "kingnodes",
         "address": "ethm130wdnzwdkphlk3vswdauvces0hmp2jr8lucydp",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "xtoadz",
+        "address": "ethm1nn4lkv7e6tfefv93xlflmk69jlngn6ed7uwxkw",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "RHINO",
+        "address": "ethm1hn2ukxscnsk9wsylaykltwy8l4zsgxf3q5tdu0",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst-k-node-0",
+        "address": "ethm1e4l3nu7ggajzy2dgrczskea5ref0745g34mdc2",
         "vote": [
           "yes"
         ]

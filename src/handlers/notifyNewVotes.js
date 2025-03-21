@@ -3,17 +3,6 @@ const fs = require('fs');
 const path = require('path');
 
 const threadMapFile = path.resolve(__dirname, '../../threadMap.json');
-let threadMap = {};
-
-console.log("Using threadMapFile =", threadMapFile);
-
-// Load thread IDs from file
-if (fs.existsSync(threadMapFile)) {
-  threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
-  console.log("threadMap loaded from file =", threadMap);
-} else {
-  console.log("No threadMap file found; threadMap is empty.");
-}
 
 async function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
@@ -24,7 +13,18 @@ async function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) 
     return;
   }
 
-  // Retrieve the threadId from our local JSON file
+  // Reload threadMap from disk
+  let threadMap = {};
+  try {
+    if (fs.existsSync(threadMapFile)) {
+      threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
+      console.log("Reloaded threadMap from disk:", threadMap);
+    }
+  } catch (error) {
+    console.error('Error reading threadMap from disk:', error);
+  }
+
+  // Retrieve the threadId from the freshly loaded threadMap
   const threadId = threadMap[proposalKey]?.threadId;
   console.log("Found threadId in threadMap:", threadId);
 
