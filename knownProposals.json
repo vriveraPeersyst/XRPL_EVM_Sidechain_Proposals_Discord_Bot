@@ -99,13 +99,82 @@
     "number": "59",
     "title": "Change the owner of the XRP token",
     "state": "PROPOSAL_STATUS_PASSED",
-    "submitTime": "2025-02-07T10:08:29.307589181Z",
-    "depositEndTime": "2025-02-09T10:08:29.307589181Z",
-    "votingStartTime": "2025-02-07T10:08:29.307589181Z",
-    "votingEndTime": "2025-02-08T10:08:29.307589181Z",
-    "proposer": "ethm1akwntffy4us9nhgcmgjxdg78v5w3xtwletyjmv",
-    "message": "The Axelar TokenManager that issues XRP has changed, and its address and needs to be updated to the new one (0x324Be08EF8154963DC9641Eb23239bC981394064). This proposal changes the owner to a new address.",
-    "votes": []
+    "submitTime": "2024-11-18T17:10:18.665049169Z",
+    "depositEndTime": "2024-11-20T17:10:18.665049169Z",
+    "votingStartTime": "2024-11-18T17:10:18.665049169Z",
+    "votingEndTime": "2024-11-25T17:10:18.665049169Z",
+    "proposer": "ethm1weul2n2ch4w5ejx86h2p9qfn2aeurwa5mkhf7h",
+    "message": "This proposal will execute a protocol upgrade to the version 4.0.0 (https://github.com/xrplevm/node/releases/tag/v4.0.0)",
+    "votes": [
+      {
+        "name": "peersyst-k-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "bkgeomatics",
+        "vote": "Yes"
+      },
+      {
+        "name": "8CSX",
+        "vote": "Yes"
+      },
+      {
+        "name": "Flowdesk",
+        "vote": "Yes"
+      },
+      {
+        "name": "ethm1f8zhf49uuhf48duh07aa67yypg36l9fx6zlmpa",
+        "vote": "Yes"
+      },
+      {
+        "name": "LinkPool",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrpl_commons",
+        "vote": "Yes"
+      },
+      {
+        "name": "xrp.cafe",
+        "vote": "Yes"
+      },
+      {
+        "name": "soru",
+        "vote": "Yes"
+      },
+      {
+        "name": "snowmaker",
+        "vote": "Yes"
+      },
+      {
+        "name": "purple-devnet-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-0",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-5",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-4",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-3",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-2",
+        "vote": "Yes"
+      },
+      {
+        "name": "peersyst-node-1",
+        "vote": "Yes"
+      }
+    ]
   },
   "60": {
     "number": "60",

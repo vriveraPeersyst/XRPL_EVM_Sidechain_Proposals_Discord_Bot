@@ -195,3 +195,4 @@ client.once('ready', async () => {
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
+
