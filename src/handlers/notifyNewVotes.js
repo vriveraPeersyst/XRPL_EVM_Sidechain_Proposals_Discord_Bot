@@ -3,14 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const threadMapFile = path.resolve(__dirname, '../../threadMap.json');
-let threadMap = {};
 
-// Load thread IDs from file
-if (fs.existsSync(threadMapFile)) {
-  threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
-}
-
-function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
+async function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
   const channelId = process.env.DISCORD_CHANNEL_ID;
   const channel = client.channels.cache.get(channelId);
 
@@ -19,14 +13,37 @@ function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) {
     return;
   }
 
-  const threadId = threadMap[proposalKey.replace(
-    '#',
-    ''
-  )];
-  const thread = channel.threads.cache.get(threadId);
+  // Reload threadMap from disk
+  let threadMap = {};
+  try {
+    if (fs.existsSync(threadMapFile)) {
+      threadMap = JSON.parse(fs.readFileSync(threadMapFile, 'utf-8'));
+      console.log("Reloaded threadMap from disk:", threadMap);
+    }
+  } catch (error) {
+    console.error('Error reading threadMap from disk:', error);
+  }
+
+  // Retrieve the threadId from the freshly loaded threadMap
+  const threadId = threadMap[proposalKey]?.threadId;
+  console.log("Found threadId in threadMap:", threadId);
+
+  if (!threadId) {
+    console.error(`Thread ID not found in threadMap for Proposal ${proposalKey}`);
+    return;
+  }
+
+  // Instead of relying on the cache, fetch the thread from Discord
+  let thread;
+  try {
+    thread = await channel.threads.fetch(threadId);
+  } catch (error) {
+    console.error(`Failed to fetch thread for Proposal ${proposalKey} with ID ${threadId}`, error);
+    return;
+  }
 
   if (!thread) {
-    console.error(`Thread not found for Proposal ${proposalKey}`);
+    console.error(`Thread not found or could not be fetched for Proposal ${proposalKey}`);
     return;
   }
 
