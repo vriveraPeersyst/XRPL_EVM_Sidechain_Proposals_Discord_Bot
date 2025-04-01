@@ -66,7 +66,7 @@ async function notifyNewProposal(client, proposalData) {
     return `[${mappedStatus.label}]`;
   };
 
-  const proposalUrl = `https://governance.xrplevm.org/xrplevm/proposals/${proposalData.number}`;
+  const proposalUrl = `https://governance.testnet.xrplevm.org/xrplevm/proposals/${proposalData.number}`;
   const embed = new EmbedBuilder()
     .setTitle(`${formatStatus(proposalData.state)} #${proposalData.number} - ${proposalData.title}`)
     .setDescription(`[View Proposal Here](${proposalUrl})\n\n${proposalData.message || 'No summary provided.'}`)

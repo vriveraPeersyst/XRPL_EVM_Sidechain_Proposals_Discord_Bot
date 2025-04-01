@@ -155,12 +155,6 @@ client.once('ready', async () => {
 
     try {
 
-
-      // 1) Cleanup: Remove votes if thread is empty
-      console.log('Cleaning up empty proposal threads...');
-      await cleanupEmptyProposalThreads(client);
-      console.log('Cleanup completed.');
-
       // 2) Scrape proposals
       console.log('Starting scrape proposals...');
       await scrapeAllProposals(scrapedProposals, knownProposals, client);
