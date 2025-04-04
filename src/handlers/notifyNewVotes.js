@@ -51,7 +51,7 @@ async function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) 
   const getVoteEmoji = (vote) => {
     if (vote.includes('yes')) return '✅';
     if (vote.includes('no')) return '❌';
-    if (vote.includes('veto')) return '🛑';
+    if (vote.includes('no_with_veto')) return '🛑';
     if (vote.includes('abstain')) return '🔵';
     return '❓';
   };

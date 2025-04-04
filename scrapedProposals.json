@@ -2,72 +2,41 @@
   "10": {
     "number": "10",
     "title": "Add Interchain Labs validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-04-01T15:15:25.407954967Z",
     "depositEndTime": "2025-04-03T15:15:25.407954967Z",
     "votingStartTime": "2025-04-01T15:15:25.407954967Z",
     "votingEndTime": "2025-04-02T15:15:25.407954967Z",
     "proposer": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
     "message": "The Interchain Foundation stewards a vast ecosystem of decentralized technologies. We develop and maintain foundational protocols, and fund organizations to create an internet of shared resources, security, and value creation.",
-    "votes": [
-      {
-        "name": "Peersyst",
-        "address": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Informal Systems",
-        "address": "ethm1sgypxlm5n6z89mraqhnx0e35uedl504qfuhyp4",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "XRPL-Commons",
-        "address": "ethm1kzndvf04r7s57tq2k5r89z9rpyctujngekal65",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Ripple",
-        "address": "ethm1euusmuqnnd696dz78cuzmcthncekm9v8xut3kf",
-        "vote": [
-          "yes"
-        ]
-      }
-    ]
+    "votes": []
   },
   "11": {
     "number": "11",
     "title": "Add Blockscout validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-04-01T15:54:16.394304797Z",
     "depositEndTime": "2025-04-03T15:54:16.394304797Z",
     "votingStartTime": "2025-04-01T15:54:16.394304797Z",
     "votingEndTime": "2025-04-02T15:54:16.394304797Z",
     "proposer": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
     "message": "Blockscout is a robust open-source tool for exploring, confirming, and inspecting transactions on any EVM blockchain. This proposal adds them as a validator to the network.",
+    "votes": []
+  },
+  "12": {
+    "number": "12",
+    "title": "Add Enigma validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-04-03T15:47:08.681211255Z",
+    "depositEndTime": "2025-04-05T15:47:08.681211255Z",
+    "votingStartTime": "2025-04-03T15:47:08.681211255Z",
+    "votingEndTime": "2025-04-17T15:47:08.681211255Z",
+    "proposer": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+    "message": "We are Enigma, a professional infrastructure provider supporting over 50 blockchain networks and offering a wide range of services, including public infrastructure, indexing solutions, analytics, and community services.\n\nOur team has been delivering public infrastructure support for XRPL for some time now, providing resources such as public RPC/LCD endpoints , daily updated snapshots and addrbook.",
     "votes": [
       {
         "name": "Peersyst",
         "address": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Informal Systems",
-        "address": "ethm1sgypxlm5n6z89mraqhnx0e35uedl504qfuhyp4",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "XRPL-Commons",
-        "address": "ethm1kzndvf04r7s57tq2k5r89z9rpyctujngekal65",
         "vote": [
           "yes"
         ]
@@ -78,7 +47,116 @@
         "vote": [
           "yes"
         ]
+      },
+      {
+        "name": "Interchain Labs",
+        "address": "ethm1uqpz0ecw4hj3ddwdv8j6u07napndfstpwkf5ue",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Kintsugi Nodes",
+        "address": "ethm1lrgv74qmcuqfe09y73y7g6f4zc938nq7uenn9t",
+        "vote": [
+          "yes"
+        ]
       }
+    ]
+  },
+  "13": {
+    "number": "13",
+    "title": "Add RHINO validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-04-03T15:47:47.990765046Z",
+    "depositEndTime": "2025-04-05T15:47:47.990765046Z",
+    "votingStartTime": "2025-04-03T15:47:47.990765046Z",
+    "votingEndTime": "2025-04-17T15:47:47.990765046Z",
+    "proposer": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+    "message": "RHINO\n\nJeff and I have over 30 years in the infrastructure and security space. Today, we secure a bit more than $450M in TVL across more than a dozen networks, including Aptos, Sei, dYdX, and others. We run bare-metal infrastructure out of 2 RHINO-owned data centers in the US, combined with an additional 4 clusters of nodes in Germany, Singapore, Tokyo and soon in the Middle East. Our security policies and ISMS are extensive, providing significant layers of security protocols to protect our operations - public or signing.\n\nIn addition to validation services, we run some of the largest RPC arrays in the space for Foundations including Sei, Aptos, Seda, and Chainlink. We serve just about 30B requests/month to over 200 DeFi, NFT, bridge, social and other teams for those projects.\n\nOur infrastructure and monitoring is built based our experience, and has significant security, resiliency and monitoring to afford any outage - at a hardware, signer, node, provider or region. We run just redundant, geo-distributed nodes for just over 60 chains, including Ethereum, Solana, Avalanche, Arbitrum, Optimism, Polygon, Polygon zkEVM, ZKSync, Scroll, Mode, XLayer and more. We'd very much like to apply our expertise, network and effort to XRPL EVM!",
+    "votes": [
+      {
+        "name": "Peersyst",
+        "address": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Ripple",
+        "address": "ethm1euusmuqnnd696dz78cuzmcthncekm9v8xut3kf",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Interchain Labs",
+        "address": "ethm1uqpz0ecw4hj3ddwdv8j6u07napndfstpwkf5ue",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Kintsugi Nodes",
+        "address": "ethm1lrgv74qmcuqfe09y73y7g6f4zc938nq7uenn9t",
+        "vote": [
+          "yes"
+        ]
+      }
+    ]
+  },
+  "14": {
+    "number": "14",
+    "title": "Add kingnodes validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-04-03T15:48:10.411462683Z",
+    "depositEndTime": "2025-04-05T15:48:10.411462683Z",
+    "votingStartTime": "2025-04-03T15:48:10.411462683Z",
+    "votingEndTime": "2025-04-17T15:48:10.411462683Z",
+    "proposer": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+    "message": "Our Australian owned and operated company, King Blockchain Pty Ltd operates validators and blockchain infrastructure as “Kingnodes” across the blockchain landscape.\n \nWe are proud to operate our own hardware racked in a tier-4 datacentre located in Brisbane, Australia, as well as a fleet of rented/leased bare metal hardware across the globe.\n \nWe have been in operation since late 2020 and operate validators on 15+ mainnet networks including Injective, Sei, dYdX, among others. We also operate associated blockchain infrastructure and services for a raft of cosmos SDK and EVM compatible blockchains. We provide B2B services such as high quality, distributed RPC systems for enterprise customers such as dYdX, as well as to individual teams. Our robust archive nodes and backup/snapshot solutions has provided blockchain history security to many chains in this time.\n \nWith our years of experience, we have developed resilient and comprehensive monitoring and alerting solutions for our operation and boast response times from the on-call engineer, on average, less than 1 hour.\n \nWe look forward to working with you all, and couldn’t be prouder to be here amongst long time friends, as well as fresh faces.",
+    "votes": [
+      {
+        "name": "Peersyst",
+        "address": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Ripple",
+        "address": "ethm1euusmuqnnd696dz78cuzmcthncekm9v8xut3kf",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Interchain Labs",
+        "address": "ethm1uqpz0ecw4hj3ddwdv8j6u07napndfstpwkf5ue",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Kintsugi Nodes",
+        "address": "ethm1lrgv74qmcuqfe09y73y7g6f4zc938nq7uenn9t",
+        "vote": [
+          "yes"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "number": "15",
+    "title": "Add MekongLabs Validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-04-04T09:04:27.377439103Z",
+    "depositEndTime": "2025-04-06T09:04:27.377439103Z",
+    "votingStartTime": "2025-04-04T09:04:27.377439103Z",
+    "votingEndTime": "2025-04-18T09:04:27.377439103Z",
+    "proposer": "ethm1areadl377gqzyn8s6mlz6phy29p70zy9hrmq4n",
+    "message": "I want to become a validator of XRPLEVM to contribute to project",
+    "votes": [
     ]
   }
 }
