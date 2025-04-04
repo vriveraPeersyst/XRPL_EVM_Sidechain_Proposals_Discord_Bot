@@ -58,7 +58,7 @@ async function notifyNewVotes(client, proposalKey, newVotes, currentVotes = []) 
 
   const totalYes = allVotes.filter(v => v.vote.includes('yes')).length;
   const totalNo = allVotes.filter(v => v.vote.includes('no')).length;
-  const totalVeto = allVotes.filter(v => v.vote.includes('veto')).length;
+  const totalVeto = allVotes.filter(v => v.vote.includes('no_with_veto')).length;
   const totalAbstain = allVotes.filter(v => v.vote.includes('abstain')).length;
 
   const embed = new EmbedBuilder()

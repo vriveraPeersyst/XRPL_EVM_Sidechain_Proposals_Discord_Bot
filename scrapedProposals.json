@@ -157,6 +157,27 @@
     "proposer": "ethm1areadl377gqzyn8s6mlz6phy29p70zy9hrmq4n",
     "message": "I want to become a validator of XRPLEVM to contribute to project",
     "votes": [
+      {
+        "name": "Peersyst",
+        "address": "ethm19z9q2dslkrspchf6rx0ygcu3wjy0g8atw6yq4g",
+        "vote": [
+          "no_with_veto"
+        ]
+      },
+      {
+        "name": "Ripple",
+        "address": "ethm1euusmuqnnd696dz78cuzmcthncekm9v8xut3kf",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Interchain Labs",
+        "address": "ethm1uqpz0ecw4hj3ddwdv8j6u07napndfstpwkf5ue",
+        "vote": [
+          "no_with_veto"
+        ]
+      }
     ]
   }
 }
