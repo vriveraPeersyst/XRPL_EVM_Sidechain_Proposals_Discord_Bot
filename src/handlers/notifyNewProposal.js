@@ -63,12 +63,12 @@ async function notifyNewProposal(client, proposalData) {
 
   const formatStatus = (status) => {
     const mappedStatus = statusMap[status] || { label: 'Unknown Status' };
-    return `${mappedStatus.label}`;
+    return `[${mappedStatus.label}]`;
   };
 
-  const proposalUrl = `https://governance.xrplevm.org/xrplevm/proposals/${proposalData.number}`;
+  const proposalUrl = `https://governance.testnet.xrplevm.org/xrplevm/proposals/${proposalData.number}`;
   const embed = new EmbedBuilder()
-    .setTitle(`[${formatStatus(proposalData.state)}] #${proposalData.number} - ${proposalData.title}`)
+    .setTitle(`${formatStatus(proposalData.state)} #${proposalData.number} - ${proposalData.title}`)
     .setDescription(`[View Proposal Here](${proposalUrl})\n\n${proposalData.message || 'No summary provided.'}`)
     .addFields(
       { name: 'Proposer', value: proposalData.proposer, inline: true },
@@ -78,13 +78,14 @@ async function notifyNewProposal(client, proposalData) {
     .setFooter({ text: 'Proposal Notification', iconURL: client.user.avatarURL() });
 
   const message = await channel.send({ embeds: [embed] });
+
   const thread = await message.startThread({
     name: `Proposal #${proposalData.number} Updates`,
     autoArchiveDuration: 1440, // 24 hours
   });
 
-  // Save the thread ID for this proposal
-  threadMap[proposalData.number] = thread.id;
+  // Save both thread ID and embed message ID for this proposal
+  threadMap[proposalData.number] = { threadId: thread.id, messageId: message.id };
   fs.writeFileSync(threadMapFile, JSON.stringify(threadMap, null, 2), 'utf-8');
 
   console.log(`Thread created for Proposal #${proposalData.number}: ${thread.id}`);
