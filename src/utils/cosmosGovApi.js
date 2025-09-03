@@ -134,7 +134,7 @@ async function scrapeProposalData(proposalId) {
  * until one is missing, then stops. Adjust logic as needed for your use.
  */
 async function scrapeAllProposals(scrapedProposals, knownProposals, client) {
-  let proposalId = 33; // or whichever starting ID you want
+  let proposalId = 8; // or whichever starting ID you want
   let missingProposals = 0;
 
   while (missingProposals < 1) {
