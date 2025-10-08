@@ -21,6 +21,12 @@ function areVotesEqual(vote1, vote2) {
 async function validateProposals(client, knownProposals, scrapedProposals) {
   for (const proposalKey in scrapedProposals) {
     const scrapedData = scrapedProposals[proposalKey];
+    
+    // Skip null or undefined proposals (array padding)
+    if (!scrapedData) {
+      continue;
+    }
+    
     const knownData = knownProposals[proposalKey] || {};
 
     let isNewProposal = !knownProposals[proposalKey];

@@ -1,58 +1,14 @@
-[
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
+{
+  "8": {
     "number": "8",
     "title": "Add CryptoCrew validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-09-04T11:10:38.633504660Z",
     "depositEndTime": "2025-09-06T11:10:38.633504660Z",
     "votingStartTime": "2025-09-04T11:10:38.633504660Z",
     "votingEndTime": "2025-09-18T11:10:38.633504660Z",
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
     "message": "CryptoCrew Validators is an Austrian-based Web3 infrastructure provider specializing in secure, transparent validation, IBC relaying and node services. \n\nSince 2021, we have secured over USD 40 million across 40+ interchain networks and facilitated millions of IBC transactions. Our global network of decentralized bare-metal servers is protected by enterprise-grade security and monitoring, backed by a 24/7 on-call operations team.\n\nAs a core protocol contributor we maintain strategic partnerships with foundations and liquid staking protocols. After winning the 2022 Game of Chains Testnet Program on the Cosmos Hub, we now support Interchain Security Solutions and onboarding for consumer chains.\n\nCryptoCrew Validators has received an AAA rating as a Verified Staking Provider on stakingrewards.com: https://www.stakingrewards.com/provider/cryptocrew-validators",
-    "votes": [
-      {
-        "name": "Enigma",
-        "address": "ethm1pzex5emt3vnr04ueyjfpnpdaxnan8r48wa5y2n",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "peersyst",
-        "address": "ethm18mwvc5xkdwrsqlhnx2typezy0wlhfddnf0eszm",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "interchain-labs",
-        "address": "ethm1t47cwkee9lhwjw7m96uldegk0wnazdx6r2vuqx",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Grove",
-        "address": "ethm1kmfpujlgf4v9krlkqh9wfj608jc8nqr6yjcptd",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "kingnodes",
-        "address": "ethm17jyye6zpx0ff265zlk9lcu8fl4p0rnr92xpxk5",
-        "vote": [
-          "yes"
-        ]
-      }
-    ]
+    "votes": []
   }
-]
+}
