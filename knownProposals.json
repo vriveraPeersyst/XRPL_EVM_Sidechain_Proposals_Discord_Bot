@@ -219,91 +219,37 @@
   "36": {
     "number": "36",
     "title": "Add CryptoCrew validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-08-28T13:39:28.223409697Z",
     "depositEndTime": "2025-08-30T13:39:28.223409697Z",
     "votingStartTime": "2025-08-28T13:39:28.223409697Z",
     "votingEndTime": "2025-09-11T13:39:28.223409697Z",
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
     "message": "CryptoCrew Validators is an Austrian-based Web3 infrastructure provider specializing in secure, transparent validation, IBC relaying and node services. \n\nSince 2021, we have secured over USD 40 million across 40+ interchain networks and facilitated millions of IBC transactions. Our global network of decentralized bare-metal servers is protected by enterprise-grade security and monitoring, backed by a 24/7 on-call operations team.\n\nAs a core protocol contributor we maintain strategic partnerships with foundations and liquid staking protocols. After winning the 2022 Game of Chains Testnet Program on the Cosmos Hub, we now support Interchain Security Solutions and onboarding for consumer chains.\n\nCryptoCrew Validators has received an AAA rating as a Verified Staking Provider on stakingrewards.com: https://www.stakingrewards.com/provider/cryptocrew-validators",
-    "votes": [
-      {
-        "name": "kingnodes 👑",
-        "address": "ethm1qkdln7h7q3u67rmlhfphuyu0uylh9qnrhr6kef",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Nexus",
-        "address": "ethm1p0u8nwst0eew0h20qadk9820pzzvxpe934muup",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "ethm1zlxdl376qfele4hgncdyd6y7a8du9wqq9uz9m5",
-        "address": "ethm1zlxdl376qfele4hgncdyd6y7a8du9wqq9uz9m5",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "purple.markets",
-        "address": "ethm1ysgde3e56mgdt6gxvd9dmempzsxzzwwnjspslw",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "SBI-DeFimans",
-        "address": "ethm122ul2nz33xek2h3r6qd8a62etkzqmsqts0sl3u",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Cumulo",
-        "address": "ethm1wkwj9parcfvcdktj48sqgl2f6cwv3807vjryrs",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "grove-xrplevm-testnet-validator1",
-        "address": "ethm1jtzqeltmemzc4gqrgxway63eu2s9gv0v6ea7r9",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Crypto Survivor",
-        "address": "ethm149nrrm3qzjl9mg5av9gnle9qrmzrrsxylxsdlh",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "RHINO 🦏",
-        "address": "ethm1hn2ukxscnsk9wsylaykltwy8l4zsgxf3q5tdu0",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Enigma",
-        "address": "ethm1mdy9dvjfky97u44htte5z2x5gx7nj5xx4298gp",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Kintsugi Nodes",
-        "address": "ethm1lrgv74qmcuqfe09y73y7g6f4zc938nq7uenn9t",
-        "vote": [
-          "yes"
-        ]
-      }
-    ]
+    "votes": []
+  },
+  "37": {
+    "number": "37",
+    "title": "Update Consensus Block Max Gas",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-10-08T15:58:58.201789927Z",
+    "depositEndTime": "2025-10-10T15:58:58.201789927Z",
+    "votingStartTime": "2025-10-08T15:58:58.201789927Z",
+    "votingEndTime": "2025-10-09T15:58:58.201789927Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "During the genesis phase of mainnet deployments, the consensus parameters were not properly set. As a result, the provided configuration was overridden by default values from CometBFT. We propose to cap the block.max_gas value to 21,000,000, which approximates the gas required for ~1,000 typical Ethereum transactions.",
+    "votes": []
+  },
+  "38": {
+    "number": "38",
+    "title": "XRPL EVM v9.0.0: Migration from Evmos to Cosmos EVM v0.4.1",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-10-13T16:56:05.314618481Z",
+    "depositEndTime": "2025-10-15T16:56:05.314618481Z",
+    "votingStartTime": "2025-10-13T16:56:05.314618481Z",
+    "votingEndTime": "2025-10-27T16:56:05.314618481Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "The XRPL EVM sidechain chain upgrade v9.0.0 is ready to migrate Evmos—an unmaintained dependency—to Cosmos EVM v0.4.1, a fully supported fork of Evmos.\nThis is more than just a technical upgrade. By moving to Cosmos EVM, the XRPL EVM ecosystem gains:\n - Long-term sustainability: Evmos had become unsupported, leaving chains that depended on it without a clear upgrade path. Cosmos EVM is actively maintained, ensuring compatibility with the broader Cosmos and Ethereum ecosystems.\n - Future-proof development: Cosmos EVM continuously integrates Ethereum standards (EIPs) and protocol upgrades. This ensures that XRPL EVM applications remain interoperable with Ethereum tooling.\n - Extended functionality: The migration introduces new ERC-20 capabilities such as mint, burn, and ownership transfer—giving developers and token projects more flexibility.\n - Alignment with the Cosmos ecosystem: By standardizing on Cosmos EVM, XRPL EVM can more easily integrate with other Cosmos SDK chains, IBC modules, and upcoming interoperability upgrades. \n\n Read more here: https://x.com/Peersyst/status/1971139829145514317",
+    "votes": []
   }
 }
