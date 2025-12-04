@@ -24,15 +24,31 @@ let knownProposals = {};
 let scrapedProposals = {};
 let threadMap = {};
 
+// Helper function to convert array to object (if needed)
+function ensureObjectStructure(data) {
+  if (Array.isArray(data)) {
+    const obj = {};
+    data.forEach((item, index) => {
+      if (item && item.number) {
+        obj[item.number] = item;
+      }
+    });
+    return obj;
+  }
+  return data || {};
+}
+
 // Load existing knownProposals
 if (fs.existsSync(knownProposalsFile)) {
-  knownProposals = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
+  const loaded = JSON.parse(fs.readFileSync(knownProposalsFile, 'utf-8'));
+  knownProposals = ensureObjectStructure(loaded);
   console.log('Loaded knownProposals:', JSON.stringify(knownProposals, null, 2));
 }
 
 // Load existing scrapedProposals
 if (fs.existsSync(scrapedProposalsFile)) {
-  scrapedProposals = JSON.parse(fs.readFileSync(scrapedProposalsFile, 'utf-8'));
+  const loaded = JSON.parse(fs.readFileSync(scrapedProposalsFile, 'utf-8'));
+  scrapedProposals = ensureObjectStructure(loaded);
   console.log('Loaded scrapedProposals:', JSON.stringify(scrapedProposals, null, 2));
 }
 

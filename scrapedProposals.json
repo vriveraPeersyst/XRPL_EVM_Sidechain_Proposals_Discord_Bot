@@ -14,13 +14,85 @@
   "9": {
     "number": "9",
     "title": "Add Range validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_PASSED",
     "submitTime": "2025-10-03T09:32:00.835211929Z",
     "depositEndTime": "2025-10-05T09:32:00.835211929Z",
     "votingStartTime": "2025-10-03T09:32:00.835211929Z",
     "votingEndTime": "2025-10-17T09:32:00.835211929Z",
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
-    "message": "We at Range would like to contribute to the XRPL EVM Mainnet. We've spun up a node and are now looking to take the next step by joining the active validator set. As a team with extensive experience in running blockchain infrastructure, we're enthusiastic about contributing to the growth and stability of the XRPL EVM ecosystem. We are looking to integrate XRPL EVM into our public explorers and extend support across the tooling and infrastructure we maintain at Range.\n\nIf we are allowed to run a mainnet validator, we kindly request a small amount of poa tokens to initiate validator promotion.",
+    "message": "We at Range would like to contribute to the XRPL EVM Mainnet. We've spun up a node and are now looking to take the next step by joining the active validator set. As a team with extensive experience in running blockchain infrastructure, we’re enthusiastic about contributing to the growth and stability of the XRPL EVM ecosystem. We are looking to integrate XRPL EVM into our public explorers and extend support across the tooling and infrastructure we maintain at Range.\n\nIf we are allowed to run a mainnet validator, we kindly request a small amount of poa tokens to initiate validator promotion.",
+    "votes": []
+  },
+  "10": {
+    "number": "10",
+    "title": "Update Consensus Block Max Gas",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-10-09T08:43:16.109133789Z",
+    "depositEndTime": "2025-10-11T08:43:16.109133789Z",
+    "votingStartTime": "2025-10-09T08:43:16.109133789Z",
+    "votingEndTime": "2025-10-10T08:43:16.109133789Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "During the genesis phase of mainnet deployments, the consensus parameters were not properly set. As a result, the provided configuration was overridden by default values from CometBFT. We propose to cap the block.max_gas value to 21,000,000, which approximates the gas required for ~1,000 typical Ethereum transactions.",
+    "votes": []
+  },
+  "11": {
+    "number": "11",
+    "title": "Add purple.markets validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-10-16T10:26:14.806927305Z",
+    "depositEndTime": "2025-10-18T10:26:14.806927305Z",
+    "votingStartTime": "2025-10-16T10:26:14.806927305Z",
+    "votingEndTime": "2025-10-30T10:26:14.806927305Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Development of singular and highly complex technological projects.",
+    "votes": []
+  },
+  "12": {
+    "number": "12",
+    "title": "Add Keplr validator",
+    "state": "PROPOSAL_STATUS_REJECTED",
+    "submitTime": "2025-10-21T08:54:11.699181108Z",
+    "depositEndTime": "2025-10-23T08:54:11.699181108Z",
+    "votingStartTime": "2025-10-21T08:54:11.699181108Z",
+    "votingEndTime": "2025-11-04T08:54:11.699181108Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Keplr is the largest wallet in the Cosmos ecosystem, trusted by over 2 million users. It also supports EVM and non-EVM chains, including Bitcoin and Starknet. In addition to the core Keplr Wallet, we offer a comprehensive suite of companion products, including Keplr Mobile, the Dashboard, the Multisig Dashboard, and the Validator Dashboard. Beyond our user-facing products, Keplr Infra has been actively operating as a validator on over 20 networks, consistently ranking among the top-tier validators. We also provide high-SLA RPC infrastructure for over 50 Cosmos-based chains and more than 7 EVM chains, dedicated to Keplr users. Our infrastructure spans over 150 servers across 6+ cloud and bare-metal providers — including our own on-premise servers — and has been operated reliably for over three years. It is enterprise-grade, ensuring high availability through finely tailored optimizations and 24/7 monitoring.",
+    "votes": []
+  },
+  "13": {
+    "number": "13",
+    "title": "Add Keplr validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-11-11T08:48:17.496656420Z",
+    "depositEndTime": "2025-11-13T08:48:17.496656420Z",
+    "votingStartTime": "2025-11-11T08:48:17.496656420Z",
+    "votingEndTime": "2025-11-25T08:48:17.496656420Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Keplr is the largest wallet in the Cosmos ecosystem, trusted by over 2 million users. It also supports EVM and non-EVM chains, including Bitcoin and Starknet. In addition to the core Keplr Wallet, we offer a comprehensive suite of companion products, including Keplr Mobile, the Dashboard, the Multisig Dashboard, and the Validator Dashboard. Beyond our user-facing products, Keplr Infra has been actively operating as a validator on over 20 networks, consistently ranking among the top-tier validators. We also provide high-SLA RPC infrastructure for over 50 Cosmos-based chains and more than 7 EVM chains, dedicated to Keplr users. Our infrastructure spans over 150 servers across 6+ cloud and bare-metal providers — including our own on-premise servers — and has been operated reliably for over three years. It is enterprise-grade, ensuring high availability through finely tailored optimizations and 24/7 monitoring.",
+    "votes": []
+  },
+  "14": {
+    "number": "14",
+    "title": "Add Imperator validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-11-13T11:37:52.166362672Z",
+    "depositEndTime": "2025-11-15T11:37:52.166362672Z",
+    "votingStartTime": "2025-11-13T11:37:52.166362672Z",
+    "votingEndTime": "2025-11-27T11:37:52.166362672Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Imperator is a trusted PoS validator and blockchain infrastructure service provider specializing in node operations, RPC endpoints, dedicated nodes, relayers, data APIs, and indexers. With 4 years of experience in end-to-end infrastructure management and scalability support for blockchain foundations, we proudly support 50+ networks with over $400M in TVL. Our clients include some of the most respected names in the industry, such as Distributed Global, Flowdesk, Selini Capital, the dYdX Trading Team & Foundation, BitGo, Anchorage, Copper, Axelar, Leap Wallet, and many others.",
+    "votes": []
+  },
+  "15": {
+    "number": "15",
+    "title": "Add bkgeomatics validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-11-27T15:44:25.723340495Z",
+    "depositEndTime": "2025-11-29T15:44:25.723340495Z",
+    "votingStartTime": "2025-11-27T15:44:25.723340495Z",
+    "votingEndTime": "2025-12-11T15:44:25.723340495Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "BKGeomatic is running 5 nodes for the evernode project, 1 node for Xahau Network, Nulink , CrossFi and Dusk projects. A geomatician and manager of an Engineering office, a crypto enthousiast and an XRP holder since 2020. Very active in the XRPL EVM since the Devnet launch.",
     "votes": [
       {
         "name": "Enigma",
@@ -58,8 +130,77 @@
         ]
       },
       {
+        "name": "RIPPLE",
+        "address": "ethm1nkxe6c5yjl58t8xkxzepvztass7amz3earlqw5",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
         "name": "Grove",
         "address": "ethm1kmfpujlgf4v9krlkqh9wfj608jc8nqr6yjcptd",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "purple.markets",
+        "address": "ethm1aqhjmqxqtyjxnl963ap6qlvd0ups6eu88apk54",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "kingnodes",
+        "address": "ethm17jyye6zpx0ff265zlk9lcu8fl4p0rnr92xpxk5",
+        "vote": [
+          "yes"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "number": "16",
+    "title": "Add Crypto Survivor validator",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2025-12-03T09:29:31.883803288Z",
+    "depositEndTime": "2025-12-05T09:29:31.883803288Z",
+    "votingStartTime": "2025-12-03T09:29:31.883803288Z",
+    "votingEndTime": "2025-12-17T09:29:31.883803288Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Crypto Survivor has been running xrpl evm nodes since devnet launched. Crypto Survivor has been deeply involved in the xrpl community since 2017. Crypto Survivor is a tradesperson who works in the regulatory compliance industry. Crypto Survivor enjoys working with code in his spare time and in addition to maintaining two servers that run multiple instances of testnet and mainnet for the xrpl evm blockchain, he is also building an app using Unity 6 and intends to release it for testing in late 2026.",
+    "votes": [
+      {
+        "name": "Enigma",
+        "address": "ethm1pzex5emt3vnr04ueyjfpnpdaxnan8r48wa5y2n",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "peersyst",
+        "address": "ethm18mwvc5xkdwrsqlhnx2typezy0wlhfddnf0eszm",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "interchain-labs",
+        "address": "ethm1t47cwkee9lhwjw7m96uldegk0wnazdx6r2vuqx",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "polkachu.com",
+        "address": "ethm10a0smqe4z2ct76ezhwzag5cq2pnel25qfp92t9",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "kingnodes",
+        "address": "ethm17jyye6zpx0ff265zlk9lcu8fl4p0rnr92xpxk5",
         "vote": [
           "yes"
         ]
