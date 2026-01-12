@@ -86,17 +86,72 @@
   "15": {
     "number": "15",
     "title": "Add bkgeomatics validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_FAILED",
     "submitTime": "2025-11-27T15:44:25.723340495Z",
     "depositEndTime": "2025-11-29T15:44:25.723340495Z",
     "votingStartTime": "2025-11-27T15:44:25.723340495Z",
     "votingEndTime": "2025-12-11T15:44:25.723340495Z",
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
     "message": "BKGeomatic is running 5 nodes for the evernode project, 1 node for Xahau Network, Nulink , CrossFi and Dusk projects. A geomatician and manager of an Engineering office, a crypto enthousiast and an XRP holder since 2020. Very active in the XRPL EVM since the Devnet launch.",
+    "votes": []
+  },
+  "16": {
+    "number": "16",
+    "title": "Add Crypto Survivor validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-12-03T09:29:31.883803288Z",
+    "depositEndTime": "2025-12-05T09:29:31.883803288Z",
+    "votingStartTime": "2025-12-03T09:29:31.883803288Z",
+    "votingEndTime": "2025-12-17T09:29:31.883803288Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Crypto Survivor has been running xrpl evm nodes since devnet launched. Crypto Survivor has been deeply involved in the xrpl community since 2017. Crypto Survivor is a tradesperson who works in the regulatory compliance industry. Crypto Survivor enjoys working with code in his spare time and in addition to maintaining two servers that run multiple instances of testnet and mainnet for the xrpl evm blockchain, he is also building an app using Unity 6 and intends to release it for testing in late 2026.",
+    "votes": []
+  },
+  "17": {
+    "number": "17",
+    "title": "Add bkgeomatics validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-12-18T15:07:20.257666580Z",
+    "depositEndTime": "2025-12-20T15:07:20.257666580Z",
+    "votingStartTime": "2025-12-18T15:07:20.257666580Z",
+    "votingEndTime": "2026-01-01T15:07:20.257666580Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "BKGeomatic is running 5 nodes for the evernode project, 1 node for Xahau Network, Nulink , CrossFi and Dusk projects. A geomatician and manager of an Engineering office, a crypto enthousiast and an XRP holder since 2020. Very active in the XRPL EVM since the Devnet launch.",
+    "votes": []
+  },
+  "18": {
+    "number": "18",
+    "title": "Add Cumulo validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2025-12-18T15:11:36.915805217Z",
+    "depositEndTime": "2025-12-20T15:11:36.915805217Z",
+    "votingStartTime": "2025-12-18T15:11:36.915805217Z",
+    "votingEndTime": "2026-01-01T15:11:36.915805217Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Cumulo is a professional PoS validator and blockchain infrastructure provider operating production infrastructure across 10+ networks, from early testnets to mainnet. We run validators, different type of nodes, monitoring systems, dashboards, and custom-built tooling across modular, EVM, Cosmos-SDK, and emerging L1 ecosystems. As a community partner, we develop technical tools, publish validator guides, and organize events and hackathons to strengthen ecosystems and support long-term sustainability. Cumulo works closely with protocol teams, foundations, builders, and communities to ensure infrastructure is not just running—but understood, accessible, and aligned with the network’s growth.",
+    "votes": []
+  },
+  "19": {
+    "number": "19",
+    "title": "XRPL EVM v9.0.0: Migration from Evmos to Cosmos EVM v0.4.2",
+    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "submitTime": "2026-01-08T15:19:27.532440838Z",
+    "depositEndTime": "2026-01-10T15:19:27.532440838Z",
+    "votingStartTime": "2026-01-08T15:19:27.532440838Z",
+    "votingEndTime": "2026-01-22T15:19:27.532440838Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "The XRPL EVM sidechain chain upgrade v9.0.0 is ready to migrate Evmos—an unmaintained dependency—to Cosmos EVM v0.4.2, a fully supported fork of Evmos.\nThis is more than just a technical upgrade. By moving to Cosmos EVM, the XRPL EVM ecosystem gains:\n - Long-term sustainability: Evmos had become unsupported, leaving chains that depended on it without a clear upgrade path. Cosmos EVM is actively maintained, ensuring compatibility with the broader Cosmos and Ethereum ecosystems.\n - Future-proof development: Cosmos EVM continuously integrates Ethereum standards (EIPs) and protocol upgrades. This ensures that XRPL EVM applications remain interoperable with Ethereum tooling.\n - Extended functionality: The migration introduces new ERC-20 capabilities such as mint, burn, and ownership transfer—giving developers and token projects more flexibility.\n - Alignment with the Cosmos ecosystem: By standardizing on Cosmos EVM, XRPL EVM can more easily integrate with other Cosmos SDK chains, IBC modules, and upcoming interoperability upgrades.\n\nRead more here: https://x.com/Peersyst/status/1971139829145514317",
     "votes": [
       {
         "name": "Enigma",
         "address": "ethm1pzex5emt3vnr04ueyjfpnpdaxnan8r48wa5y2n",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Imperator.co",
+        "address": "ethm18f9y5nt6xywlrcd7j0t23luhrpjxyasrypr8mt",
         "vote": [
           "yes"
         ]
@@ -130,8 +185,15 @@
         ]
       },
       {
-        "name": "RIPPLE",
-        "address": "ethm1nkxe6c5yjl58t8xkxzepvztass7amz3earlqw5",
+        "name": "bkgeomatics",
+        "address": "ethm154ysyzvcjqz49wtlq8cr3v7877dpqtaq66zvxd",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Keplr",
+        "address": "ethm14u297hphr35w6mnr0yhjk092084s0tayr5wz9z",
         "vote": [
           "yes"
         ]
@@ -144,56 +206,22 @@
         ]
       },
       {
+        "name": "Cumulo",
+        "address": "ethm1e5l0hp498n03yedhquydfjqgnc3evzfzd4e7az",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
+        "name": "Crypto Survivor",
+        "address": "ethm16f2ll6esyq4qqjwktm68s0ryvadktua0fk267l",
+        "vote": [
+          "yes"
+        ]
+      },
+      {
         "name": "purple.markets",
         "address": "ethm1aqhjmqxqtyjxnl963ap6qlvd0ups6eu88apk54",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "kingnodes",
-        "address": "ethm17jyye6zpx0ff265zlk9lcu8fl4p0rnr92xpxk5",
-        "vote": [
-          "yes"
-        ]
-      }
-    ]
-  },
-  "16": {
-    "number": "16",
-    "title": "Add Crypto Survivor validator",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
-    "submitTime": "2025-12-03T09:29:31.883803288Z",
-    "depositEndTime": "2025-12-05T09:29:31.883803288Z",
-    "votingStartTime": "2025-12-03T09:29:31.883803288Z",
-    "votingEndTime": "2025-12-17T09:29:31.883803288Z",
-    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
-    "message": "Crypto Survivor has been running xrpl evm nodes since devnet launched. Crypto Survivor has been deeply involved in the xrpl community since 2017. Crypto Survivor is a tradesperson who works in the regulatory compliance industry. Crypto Survivor enjoys working with code in his spare time and in addition to maintaining two servers that run multiple instances of testnet and mainnet for the xrpl evm blockchain, he is also building an app using Unity 6 and intends to release it for testing in late 2026.",
-    "votes": [
-      {
-        "name": "Enigma",
-        "address": "ethm1pzex5emt3vnr04ueyjfpnpdaxnan8r48wa5y2n",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "peersyst",
-        "address": "ethm18mwvc5xkdwrsqlhnx2typezy0wlhfddnf0eszm",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "interchain-labs",
-        "address": "ethm1t47cwkee9lhwjw7m96uldegk0wnazdx6r2vuqx",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "polkachu.com",
-        "address": "ethm10a0smqe4z2ct76ezhwzag5cq2pnel25qfp92t9",
         "vote": [
           "yes"
         ]

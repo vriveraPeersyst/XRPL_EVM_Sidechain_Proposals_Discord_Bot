@@ -50,7 +50,7 @@ async function validateProposals(client, knownProposals, scrapedProposals) {
       const newVotingEndTime = formatUTCDate(scrapedData.votingEndTime);
       
       console.log(`State change detected for Proposal ${proposalKey}: ${knownData.state} -> ${scrapedData.state}`);
-      notifyNewStatus(client, proposalKey, knownData.state, scrapedData.state, newVotingEndTime);
+      await notifyNewStatus(client, proposalKey, knownData.state, scrapedData.state, newVotingEndTime);
       hasChanges = true;
     }
 
@@ -60,7 +60,7 @@ async function validateProposals(client, knownProposals, scrapedProposals) {
     );
     if (newVotes.length > 0) {
       console.log(`New votes detected for Proposal ${proposalKey}:`, newVotes);
-      notifyNewVotes(client, proposalKey, newVotes, knownData.votes || []);
+      await notifyNewVotes(client, proposalKey, newVotes, knownData.votes || []);
       hasChanges = true;
     }
 
