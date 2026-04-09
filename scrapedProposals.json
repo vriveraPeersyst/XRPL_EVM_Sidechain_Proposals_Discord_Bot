@@ -134,105 +134,121 @@
   "19": {
     "number": "19",
     "title": "XRPL EVM v9.0.0: Migration from Evmos to Cosmos EVM v0.4.2",
-    "state": "PROPOSAL_STATUS_VOTING_PERIOD",
+    "state": "PROPOSAL_STATUS_REJECTED",
     "submitTime": "2026-01-08T15:19:27.532440838Z",
     "depositEndTime": "2026-01-10T15:19:27.532440838Z",
     "votingStartTime": "2026-01-08T15:19:27.532440838Z",
     "votingEndTime": "2026-01-22T15:19:27.532440838Z",
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
     "message": "The XRPL EVM sidechain chain upgrade v9.0.0 is ready to migrate Evmos—an unmaintained dependency—to Cosmos EVM v0.4.2, a fully supported fork of Evmos.\nThis is more than just a technical upgrade. By moving to Cosmos EVM, the XRPL EVM ecosystem gains:\n - Long-term sustainability: Evmos had become unsupported, leaving chains that depended on it without a clear upgrade path. Cosmos EVM is actively maintained, ensuring compatibility with the broader Cosmos and Ethereum ecosystems.\n - Future-proof development: Cosmos EVM continuously integrates Ethereum standards (EIPs) and protocol upgrades. This ensures that XRPL EVM applications remain interoperable with Ethereum tooling.\n - Extended functionality: The migration introduces new ERC-20 capabilities such as mint, burn, and ownership transfer—giving developers and token projects more flexibility.\n - Alignment with the Cosmos ecosystem: By standardizing on Cosmos EVM, XRPL EVM can more easily integrate with other Cosmos SDK chains, IBC modules, and upcoming interoperability upgrades.\n\nRead more here: https://x.com/Peersyst/status/1971139829145514317",
-    "votes": [
-      {
-        "name": "Enigma",
-        "address": "ethm1pzex5emt3vnr04ueyjfpnpdaxnan8r48wa5y2n",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Imperator.co",
-        "address": "ethm18f9y5nt6xywlrcd7j0t23luhrpjxyasrypr8mt",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "peersyst",
-        "address": "ethm18mwvc5xkdwrsqlhnx2typezy0wlhfddnf0eszm",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "RHINO 🦏",
-        "address": "ethm12yg0pvvehnr82dqgtjp6xrvhdgcrp7kmadgwmc",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "interchain-labs",
-        "address": "ethm1t47cwkee9lhwjw7m96uldegk0wnazdx6r2vuqx",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "polkachu.com",
-        "address": "ethm10a0smqe4z2ct76ezhwzag5cq2pnel25qfp92t9",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "bkgeomatics",
-        "address": "ethm154ysyzvcjqz49wtlq8cr3v7877dpqtaq66zvxd",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Keplr",
-        "address": "ethm14u297hphr35w6mnr0yhjk092084s0tayr5wz9z",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Grove",
-        "address": "ethm1kmfpujlgf4v9krlkqh9wfj608jc8nqr6yjcptd",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Cumulo",
-        "address": "ethm1e5l0hp498n03yedhquydfjqgnc3evzfzd4e7az",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "Crypto Survivor",
-        "address": "ethm16f2ll6esyq4qqjwktm68s0ryvadktua0fk267l",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "purple.markets",
-        "address": "ethm1aqhjmqxqtyjxnl963ap6qlvd0ups6eu88apk54",
-        "vote": [
-          "yes"
-        ]
-      },
-      {
-        "name": "kingnodes",
-        "address": "ethm17jyye6zpx0ff265zlk9lcu8fl4p0rnr92xpxk5",
-        "vote": [
-          "yes"
-        ]
-      }
-    ]
+    "votes": []
+  },
+  "20": {
+    "number": "20",
+    "title": "Replace CryptoCrew validator",
+    "state": "PROPOSAL_STATUS_FAILED",
+    "submitTime": "2026-01-26T14:40:07.897564590Z",
+    "depositEndTime": "2026-01-28T14:40:07.897564590Z",
+    "votingStartTime": "2026-01-26T14:40:07.897564590Z",
+    "votingEndTime": "2026-02-09T14:40:07.897564590Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "CryptoCrew Validators is an Austrian-based Web3 infrastructure provider specializing in secure, transparent validation, IBC relaying, and node services. Since 2021, we have secured over USD 40 million across 40+ interchain networks, facilitated millions of IBC transactions, and operate a global network of decentralized bare-metal servers with enterprise-grade security and monitoring. As a core protocol contributor, we maintain strategic partnerships with foundations and liquid staking protocols, support Interchain Security Solutions and onboarding for consumer chains, and have received an AAA rating as a Verified Staking Provider on stakingrewards.com: https://www.stakingrewards.com/provider/cryptocrew-validators.",
+    "votes": []
+  },
+  "21": {
+    "number": "21",
+    "title": "Add Flowdesk validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-01-30T11:43:09.476708867Z",
+    "depositEndTime": "2026-02-01T11:43:09.476708867Z",
+    "votingStartTime": "2026-01-30T11:43:09.476708867Z",
+    "votingEndTime": "2026-02-13T11:43:09.476708867Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "Flowdesk is a regulated digital asset service provider specializing in liquidity provision, OTC trading, treasury management, and proprietary trading technology for token issuers, foundations, exchanges, and institutions. Operating 24/7/365 with global coverage across five offices and registered as a Digital Asset Service Provider with the Financial Market Authority of France, the firm delivers deep liquidity, competitive pricing across spot, derivatives, and credit markets, while leveraging advanced execution algorithms and risk management tools to minimize market impact and enable scalable on- and off-chain trading strategies with maximum confidence and transparency, ultimately building institutional grade infrastructure to support blockchain as the foundation of tomorrow's financial system.",
+    "votes": []
+  },
+  "22": {
+    "number": "22",
+    "title": "Replace CryptoCrew validator",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-02-09T15:21:33.278520071Z",
+    "depositEndTime": "2026-02-11T15:21:33.278520071Z",
+    "votingStartTime": "2026-02-09T15:21:33.278520071Z",
+    "votingEndTime": "2026-02-23T15:21:33.278520071Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "CryptoCrew Validators is an Austrian-based Web3 infrastructure provider specializing in secure, transparent validation, IBC relaying, and node services. Since 2021, we have secured over USD 40 million across 40+ interchain networks, facilitated millions of IBC transactions, and operate a global network of decentralized bare-metal servers with enterprise-grade security and monitoring. As a core protocol contributor, we maintain strategic partnerships with foundations and liquid staking protocols, support Interchain Security Solutions and onboarding for consumer chains, and have received an AAA rating as a Verified Staking Provider on stakingrewards.com: https://www.stakingrewards.com/provider/cryptocrew-validators.",
+    "votes": []
+  },
+  "23": {
+    "number": "23",
+    "title": "Add Atlas Staking validator",
+    "state": "PROPOSAL_STATUS_REJECTED",
+    "submitTime": "2026-02-10T19:46:54.406745489Z",
+    "depositEndTime": "2026-02-12T19:46:54.406745489Z",
+    "votingStartTime": "2026-02-10T19:46:54.406745489Z",
+    "votingEndTime": "2026-02-24T19:46:54.406745489Z",
+    "proposer": "ethm19jrpj557aj5cu7fuktf9sc34f2juu3pk7zx2s0",
+    "message": "Atlas Staking has been running an XRPL mainnet validator without issue since genesis. We're excited to finally have a proposal on-chain and respectfully ask to be added. Atlas strives to be the kind of validator that makes life easier for everyone in the set: we run a cautious, well‑tested setup (multi‑datacenter sentries, keys kept off internet‑facing hosts, strict access controls, and practical incident runbooks) so we can be a steady, predictable peer when the network is under stress. Over the last few years, foundations and core teams in other ecosystems have chosen to delegate to us after doing their own checks, and we’ve tried to repay that trust by showing up reliably and communicating clearly during upgrades and incidents. We are active governance participants on all chains we support, and have published a deep library of ecosystem primers and staking tutorials to help onboard network users. A “yes” on this proposal adds a teammate who will quietly share the load of keeping blocks moving, participate constructively in discussions, and help explain changes to users and builders in ways that reduce, not increase, the support burden for the rest of the validator set.",
+    "votes": []
+  },
+  "24": {
+    "number": "24",
+    "title": "Update EVM params to allow the deployment of https://github.com/Arachnid/deterministic-deployment-proxy",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-02-16T17:34:04.693293259Z",
+    "depositEndTime": "2026-02-18T17:34:04.693293259Z",
+    "votingStartTime": "2026-02-16T17:34:04.693293259Z",
+    "votingEndTime": "2026-02-17T17:34:04.693293259Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This governance proposal updates the chain’s evm and feemarket module parameters to enable deployment of the Deterministic Deployment Proxy (Arachnid).\nIt sets allow_unprotected_txs = true to permit legacy, pre-EIP155 (unprotected) transactions required by the proxy’s deployment flow.\nIt also reduces base_fee to 100 GWei to ensure the deployment transaction meets fee constraints.\nNo other EVM behavior or chain parameters are modified. Once passed, the proxy can be deployed and used for deterministic contract deployments across environments.",
+    "votes": []
+  },
+  "25": {
+    "number": "25",
+    "title": "XRPL EVM v9.0.0: Migration from Evmos to Cosmos EVM v0.4.2",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-02-25T09:56:41.027819597Z",
+    "depositEndTime": "2026-02-27T09:56:41.027819597Z",
+    "votingStartTime": "2026-02-25T09:56:41.027819597Z",
+    "votingEndTime": "2026-02-26T09:56:41.027819597Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "The XRPL EVM sidechain chain upgrade v9.0.0 is ready to migrate Evmos—an unmaintained dependency—to Cosmos EVM v0.4.2, a fully supported fork of Evmos.\nThis is more than just a technical upgrade. By moving to Cosmos EVM, the XRPL EVM ecosystem gains:\n - Long-term sustainability: Evmos had become unsupported, leaving chains that depended on it without a clear upgrade path. Cosmos EVM is actively maintained, ensuring compatibility with the broader Cosmos and Ethereum ecosystems.\n - Future-proof development: Cosmos EVM continuously integrates Ethereum standards (EIPs) and protocol upgrades. This ensures that XRPL EVM applications remain interoperable with Ethereum tooling.\n - Extended functionality: The migration introduces new ERC-20 capabilities such as mint, burn, and ownership transfer—giving developers and token projects more flexibility.\n - Alignment with the Cosmos ecosystem: By standardizing on Cosmos EVM, XRPL EVM can more easily integrate with other Cosmos SDK chains, IBC modules, and upcoming interoperability upgrades.\n\nRead more here: https://x.com/Peersyst/status/1971139829145514317",
+    "votes": []
+  },
+  "26": {
+    "number": "26",
+    "title": "XRPL EVM v10.0.0: cosmos/evm fix",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-02-26T14:52:59.176742516Z",
+    "depositEndTime": "2026-02-28T14:52:59.176742516Z",
+    "votingStartTime": "2026-02-26T14:52:59.176742516Z",
+    "votingEndTime": "2026-02-27T14:52:59.176742516Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This expedited proposal schedules the XRPL EVM v10.0.0 network upgrade at block height 4,749,700. The upgrade deploys node release v10.0.2 and includes a fix for the cosmos/evm.",
+    "votes": []
+  },
+  "27": {
+    "number": "27",
+    "title": "Remove Informal Systems and Grove validators",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-03-25T17:05:46.890248541Z",
+    "depositEndTime": "2026-03-27T17:05:46.890248541Z",
+    "votingStartTime": "2026-03-25T17:05:46.890248541Z",
+    "votingEndTime": "2026-04-08T17:05:46.890248541Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This proposal removes the Informal Systems and Grove validators from the validator set. These validators have ceased their activities as validators and have communicated that they do not wish to continue operating validator infrastructure for the network. The purpose of this proposal is to keep the validator set aligned with the set of actively participating operators.",
+    "votes": []
+  },
+  "28": {
+    "number": "28",
+    "title": "Remove Informal Systems and Grove validators",
+    "state": "PROPOSAL_STATUS_FAILED",
+    "submitTime": "2026-03-25T17:37:15.236277694Z",
+    "depositEndTime": "2026-03-27T17:37:15.236277694Z",
+    "votingStartTime": "2026-03-25T17:37:15.236277694Z",
+    "votingEndTime": "2026-04-08T17:37:15.236277694Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This proposal removes the Informal Systems and Grove validators from the validator set. These validators have ceased their activities as validators and have communicated that they do not wish to continue operating validator infrastructure for the network. The purpose of this proposal is to keep the validator set aligned with the set of actively participating operators.",
+    "votes": []
   }
 }
