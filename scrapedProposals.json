@@ -251,5 +251,53 @@
     "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
     "message": "The XRPL EVM sidechain chain upgrade v9.0.0 is ready to migrate Evmos—an unmaintained dependency—to Cosmos EVM v0.4.1, a fully supported fork of Evmos.\nThis is more than just a technical upgrade. By moving to Cosmos EVM, the XRPL EVM ecosystem gains:\n - Long-term sustainability: Evmos had become unsupported, leaving chains that depended on it without a clear upgrade path. Cosmos EVM is actively maintained, ensuring compatibility with the broader Cosmos and Ethereum ecosystems.\n - Future-proof development: Cosmos EVM continuously integrates Ethereum standards (EIPs) and protocol upgrades. This ensures that XRPL EVM applications remain interoperable with Ethereum tooling.\n - Extended functionality: The migration introduces new ERC-20 capabilities such as mint, burn, and ownership transfer—giving developers and token projects more flexibility.\n - Alignment with the Cosmos ecosystem: By standardizing on Cosmos EVM, XRPL EVM can more easily integrate with other Cosmos SDK chains, IBC modules, and upcoming interoperability upgrades. \n\n Read more here: https://x.com/Peersyst/status/1971139829145514317",
     "votes": []
+  },
+  "39": {
+    "number": "39",
+    "title": "XRPL EVM v10.0.0: Migration from Cosmos EVM v0.4.2 to v0.6.0",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-02-19T18:53:18.174459603Z",
+    "depositEndTime": "2026-02-21T18:53:18.174459603Z",
+    "votingStartTime": "2026-02-19T18:53:18.174459603Z",
+    "votingEndTime": "2026-02-20T18:53:18.174459603Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "The XRPL EVM sidechain chain upgrade v10.0.0 is ready to migrate Cosmos EVM v0.4.2 to v0.6.0, a fully supported fork of Cosmos EVM.",
+    "votes": []
+  },
+  "40": {
+    "number": "40",
+    "title": "Update EVM params to allow the deployment of https://github.com/Arachnid/deterministic-deployment-proxy",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-03-05T18:20:43.739569863Z",
+    "depositEndTime": "2026-03-07T18:20:43.739569863Z",
+    "votingStartTime": "2026-03-05T18:20:43.739569863Z",
+    "votingEndTime": "2026-03-06T18:20:43.739569863Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This governance proposal updates the chain’s feemarket module parameters to enable deployment of the Deterministic Deployment Proxy (Arachnid).\n\nIt reduces base_fee to 100 GWei to ensure the deployment transaction meets fee constraints.\n Once passed, the proxy can be deployed and used for deterministic contract deployments across environments.",
+    "votes": []
+  },
+  "41": {
+    "number": "41",
+    "title": "Remove Grove, Cosmostation, MOAI, xToadz, Informal Systems and Nexus validators from testnet",
+    "state": "PROPOSAL_STATUS_PASSED",
+    "submitTime": "2026-03-25T17:12:23.747725661Z",
+    "depositEndTime": "2026-03-27T17:12:23.747725661Z",
+    "votingStartTime": "2026-03-25T17:12:23.747725661Z",
+    "votingEndTime": "2026-04-08T17:12:23.747725661Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This proposal removes validators from the validator set. These validators have ceased their activities as validators. The purpose of this proposal is to keep the validator set aligned with the set of actively participating operators.",
+    "votes": []
+  },
+  "42": {
+    "number": "42",
+    "title": "Remove Grove, Cosmostation, MOAI, xToadz, Informal Systems and Nexus validators from testnet",
+    "state": "PROPOSAL_STATUS_REJECTED",
+    "submitTime": "2026-03-25T17:38:05.289178441Z",
+    "depositEndTime": "2026-03-27T17:38:05.289178441Z",
+    "votingStartTime": "2026-03-25T17:38:05.289178441Z",
+    "votingEndTime": "2026-04-08T17:38:05.289178441Z",
+    "proposer": "ethm1z4f0lx5t3mwxq9799nlefpz7v0s0t0eed7w3w8",
+    "message": "This proposal removes validators from the validator set. These validators have ceased their activities as validators. The purpose of this proposal is to keep the validator set aligned with the set of actively participating operators.",
+    "votes": []
   }
 }
